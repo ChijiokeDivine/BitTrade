@@ -1,0 +1,166 @@
+/**
+ * @package Helix Ultimate Framework
+ * @author JoomShaper https://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2018 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or Later
+ */
+body, .sp-preloader {
+  background-color: #fff;
+}
+.sp-preloader > div {
+  background: #1680fb;
+}
+.sp-preloader > div:after {
+  background: #fff;
+}
+#sp-top-bar {
+  background: #1680fb;
+  color: #fff;
+}
+#sp-top-bar a {
+  color: #fff;
+}
+#sp-header {
+  background: #fff;
+}
+a {
+  color: inherit;
+}
+a:hover, a:focus, a:active {
+  color: #1680fb;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	color: #1680fb;
+}
+.tags > li {
+  display: inline-block;
+}
+.tags > li a {
+  background: #1680fb;
+  color: #fff;
+  border: 1px solid #1680fb;
+}
+.tags > li a:hover {
+  background: transparent;
+  color: #1680fb;
+}
+.article-social-share .social-share-icon ul li a {
+  color: #585858;
+}
+.article-social-share .social-share-icon ul li a:hover, .article-social-share .social-share-icon ul li a:focus {
+  background: transparent;
+}
+.pager > li a {
+  border: 1px solid #ededed;
+  color: #3a3736;
+}
+.sp-megamenu-parent > li > a {
+  color: #42558c;
+}
+.sp-megamenu-parent > li:hover > a {
+  color: #1680fb;
+}
+.sp-megamenu-parent > li.active > a, .sp-megamenu-parent > li.active:hover > a {
+  color: #1680fb;
+}
+.sp-megamenu-parent .sp-dropdown .sp-dropdown-inner {
+  background: #fff;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a {
+  color: #555;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item > a:hover {
+  color: #1680fb;
+}
+.sp-megamenu-parent .sp-dropdown li.sp-menu-item.active > a {
+  color: #1680fb;
+}
+.sp-megamenu-parent .sp-mega-group > li > a {
+  color: #777a7c;
+}
+#offcanvas-toggler > .fa {
+  color: #fff;
+}
+#offcanvas-toggler > .fa:hover, #offcanvas-toggler > .fa:focus, #offcanvas-toggler > .fa:active {
+  color: #1680fb;
+}
+.offcanvas-menu {
+ color: #555;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li a, .offcanvas-menu .offcanvas-inner .sp-module ul > li span {
+ color: #555;
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li a:hover, .offcanvas-menu .offcanvas-inner .sp-module ul > li span:hover, .offcanvas-menu .offcanvas-inner .sp-module ul > li a:focus, .offcanvas-menu .offcanvas-inner .sp-module ul > li span:focus {
+  color: rgba(255, 255, 255, 0.8);
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li.menu-parent > a > .menu-toggler, .offcanvas-menu .offcanvas-inner .sp-module ul > li.menu-parent > .menu-separator > .menu-toggler {
+  color: rgba(255, 255, 255, 0.5);
+}
+.offcanvas-menu .offcanvas-inner .sp-module ul > li ul li a {
+  color: #fff;
+}
+.btn-primary {
+  border-color: #1680fb;
+  background-color: #1680fb;
+}
+.btn-primary:hover {
+  border-color: #1680fb;
+  background-color: #1680fb;
+}
+ul.social-icons > li a:hover {
+  color: #1680fb;
+}
+.sp-page-title {
+  background: #1680fb;
+}
+.layout-boxed .body-innerwrapper {
+  background: #fff;
+}
+.sp-module ul > li > a:hover {
+  color: #1680fb;
+}
+.sp-module .latestnews > div > a {
+  color: #3a3736;
+}
+.sp-module .latestnews > div > a:hover {
+  color: #1680fb;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #1680fb;
+}
+.search .btn-toolbar button {
+  background: #1680fb;
+}
+#sp-footer, #sp-bottom {
+  background: #fff;
+}
+
+.sp-comingsoon body {
+  background-color: #1680fb;
+}
+.pagination > li > a, .pagination > li > span {
+  color: #3a3736;
+}
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+  color: #3a3736;
+}
+.pagination > .active > a, .pagination > .active > span {
+  border-color: #1680fb;
+  background-color: #1680fb;
+}
+.pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  border-color: #1680fb;
+  background-color: #1680fb;
+}
+.error-code, .coming-soon-number {
+  color: #1680fb;
+}
+
+.text-primary {
+  color: #1680fb !important;
+}
+
+:root {
+  --maincolor: #1680fb;
+}

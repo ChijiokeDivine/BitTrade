@@ -1,0 +1,58 @@
+{% extends "partials/auth.html" %}
+{% load static %}
+{% block authTitle %}metafinancez - Sign In{% endblock authTitle %}
+{% block content %}
+
+            <!-- Login Form
+		  ========================= -->
+            <div class="col-md-6 d-flex align-items-center py-5 " >
+              <div class="container my-auto py-4 shadow-lg bg-white">
+                <div class="row">
+                  <div class="col-11 col-lg-10 mx-auto">
+                    <h3 class="text-9 fw-600 text-center my-3">Sign In</h3>
+                    <p class="text-center mb-4">New to metafinancez? <a
+                        style="color: #7b5dd6; text-decoration: none; font-weight: 500;" href="{% url "userauths:sign-up" %}">Create an Account</a></p>
+                        {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{message.tags}}">
+                                <strong>{{ message }}</strong>
+                            </div>
+
+                        {% endfor %}
+                    {% endif %}
+                    <script>
+                        setTimeout (() => {
+                            $(".alert").alert("close");
+                        }, 4000)
+                    </script>   
+                    <form id="loginForm" method="POST">
+                      {% csrf_token %}
+                      <div class="mb-3">
+                        <label class="form-label text-dark fw-600" for="emailAddress">Email Address</label>
+                        <input type="email" name="email" class="form-control rounded-2" id="emailAddress" required=""
+                          placeholder="Enter Your Email">
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label text-dark fw-600" for="loginPassword">Password</label>
+                        <input type="password"  name="password" class="form-control rounded-2" id="loginPassword"
+                          required="" placeholder="Enter Password">
+                      </div>
+                      <div class="row mt-4">
+                        <div class="col">
+                          <div class="form-check">
+                            <input id="remember-me" name="remember" class="form-check-input rounded-0" type="checkbox">
+                            <label class="form-check-label" for="remember-me">Remember Me</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-grid my-4">
+                        <button style="background: #7b5dd6; color: #fff;" class="btn rounded-2" type="submit">Sign In</button>
+                      </div>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Login Form End -->
+{% endblock content %}

@@ -1,0 +1,62 @@
+{% extends "partials/auth.html" %}
+{% load static %}
+{% block authTitle %}metafinancez - Create account{% endblock authTitle %}
+{% block content %}
+          <!-- Register Form
+		  ========================= -->
+          <div class="col-md-6 d-flex align-items-center py-5">
+            <div class="container my-auto py-4 shadow-lg bg-white">
+              <div class="row">
+                <div class="col-11 col-lg-10 mx-auto">
+                  <h3 class="text-9 fw-600 text-center my-3">Create an Account</h3>
+                  <p class="text-center mb-4">Don't have an account? <a style="color: #7b5dd6; text-decoration: none; font-weight: 500;" href="{% url "userauths:sign-in" %}">Sign In</a></p>
+                  <div class="padding_eight_all bg-white">
+                    {% if form.errors %}
+                    <div class="alert alert-danger">
+                        <strong style="font-size: 13px;">{{form.errors}}</strong>
+                    </div>
+                    {% endif %}
+                </div>
+                <script>
+                    setTimeout (() => {
+                        $(".alert").alert("close");
+                    }, 4000)
+              </script>
+                  <form id="registerForm" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="emailAddress">Email Address</label>
+                      {{form.email}}
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="emailAddress">Username</label>
+                      {{form.username}}
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="emailAddress">Country</label>
+                      {{form.address}}
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="loginPassword">Password</label>
+                      {{form.password1}}
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="loginPassword">Confirm Password</label>
+                      {{form.password2}}
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label text-dark fw-600" for="loginPassword">Referral Code</label>
+                      {{form.referred}}
+                    </div>
+                    <div class="d-grid my-4">
+						<button class="btn rounded-2" style="background: #7b5dd6; color: #fff;" type="submit">Create Account</button>
+					</div>
+                    <p class="text-center text-muted text-2 mb-0">By creating an account, you agree to <span class="fw-bold fs-15">Metafinancez</span> Terms and Privacy</p>
+                  </form>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+{% endblock content %}
