@@ -1,535 +1,7 @@
+{% extends "partials/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en-US">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-
-	<title>Bittradexchange - The easy way to invest</title>
-	<meta name="robots" content="max-image-preview:large">
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="alternate" type="application/rss+xml" title="Zuzu » Feed"
-		href="">
-	<link rel="alternate" type="application/rss+xml" title="Zuzu » Comments Feed"
-		href="">
-	<script>
-		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/mthemeus.com\/demos\/wp\/zuzu\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.4.2" } };
-		/*! This file is auto-generated */
-		!function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83e\udef1\ud83c\udffb\u200d\ud83e\udef2\ud83c\udfff", "\ud83e\udef1\ud83c\udffb\u200b\ud83e\udef2\ud83c\udfff") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
-	</script>
-	<style id="wp-emoji-styles-inline-css">
-		img.wp-smiley,
-		img.emoji {
-			display: inline !important;
-			border: none !important;
-			box-shadow: none !important;
-			height: 1em !important;
-			width: 1em !important;
-			margin: 0 0.07em !important;
-			vertical-align: -0.1em !important;
-			background: none !important;
-			padding: 0 !important;
-		}
-	</style>
-	<link rel="stylesheet" id="wp-block-library-css" href="{% static 'css/style.min12.css' %}" media="all">
-	<style id="classic-theme-styles-inline-css">
-		/*! This file is auto-generated */
-		.wp-block-button__link {
-			color: #fff;
-			background-color: #32373c;
-			border-radius: 9999px;
-			box-shadow: none;
-			text-decoration: none;
-			padding: calc(.667em + 2px) calc(1.333em + 2px);
-			font-size: 1.125em
-		}
-
-		.wp-block-file__button {
-			background: #32373c;
-			color: #fff;
-			text-decoration: none
-		}
-	</style>
-	<style id="global-styles-inline-css">
-		body {
-			--wp--preset--color--black: #000000;
-			--wp--preset--color--cyan-bluish-gray: #abb8c3;
-			--wp--preset--color--white: #ffffff;
-			--wp--preset--color--pale-pink: #f78da7;
-			--wp--preset--color--vivid-red: #cf2e2e;
-			--wp--preset--color--luminous-vivid-orange: #ff6900;
-			--wp--preset--color--luminous-vivid-amber: #fcb900;
-			--wp--preset--color--light-green-cyan: #7bdcb5;
-			--wp--preset--color--vivid-green-cyan: #00d084;
-			--wp--preset--color--pale-cyan-blue: #8ed1fc;
-			--wp--preset--color--vivid-cyan-blue: #0693e3;
-			--wp--preset--color--vivid-purple: #9b51e0;
-			--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
-			--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
-			--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
-			--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
-			--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
-			--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
-			--wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
-			--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
-			--wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
-			--wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
-			--wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
-			--wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
-			--wp--preset--font-size--small: 13px;
-			--wp--preset--font-size--medium: 20px;
-			--wp--preset--font-size--large: 36px;
-			--wp--preset--font-size--x-large: 42px;
-			--wp--preset--spacing--20: 0.44rem;
-			--wp--preset--spacing--30: 0.67rem;
-			--wp--preset--spacing--40: 1rem;
-			--wp--preset--spacing--50: 1.5rem;
-			--wp--preset--spacing--60: 2.25rem;
-			--wp--preset--spacing--70: 3.38rem;
-			--wp--preset--spacing--80: 5.06rem;
-			--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);
-			--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);
-			--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);
-			--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);
-			--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);
-		}
-
-		:where(.is-layout-flex) {
-			gap: 0.5em;
-		}
-
-		:where(.is-layout-grid) {
-			gap: 0.5em;
-		}
-
-		body .is-layout-flow>.alignleft {
-			float: left;
-			margin-inline-start: 0;
-			margin-inline-end: 2em;
-		}
-
-		body .is-layout-flow>.alignright {
-			float: right;
-			margin-inline-start: 2em;
-			margin-inline-end: 0;
-		}
-
-		body .is-layout-flow>.aligncenter {
-			margin-left: auto !important;
-			margin-right: auto !important;
-		}
-
-		body .is-layout-constrained>.alignleft {
-			float: left;
-			margin-inline-start: 0;
-			margin-inline-end: 2em;
-		}
-
-		body .is-layout-constrained>.alignright {
-			float: right;
-			margin-inline-start: 2em;
-			margin-inline-end: 0;
-		}
-
-		body .is-layout-constrained>.aligncenter {
-			margin-left: auto !important;
-			margin-right: auto !important;
-		}
-
-		body .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-			max-width: var(--wp--style--global--content-size);
-			margin-left: auto !important;
-			margin-right: auto !important;
-		}
-
-		body .is-layout-constrained>.alignwide {
-			max-width: var(--wp--style--global--wide-size);
-		}
-
-		body .is-layout-flex {
-			display: flex;
-		}
-
-		body .is-layout-flex {
-			flex-wrap: wrap;
-			align-items: center;
-		}
-
-		body .is-layout-flex>* {
-			margin: 0;
-		}
-
-		body .is-layout-grid {
-			display: grid;
-		}
-
-		body .is-layout-grid>* {
-			margin: 0;
-		}
-
-		:where(.wp-block-columns.is-layout-flex) {
-			gap: 2em;
-		}
-
-		:where(.wp-block-columns.is-layout-grid) {
-			gap: 2em;
-		}
-
-		:where(.wp-block-post-template.is-layout-flex) {
-			gap: 1.25em;
-		}
-
-		:where(.wp-block-post-template.is-layout-grid) {
-			gap: 1.25em;
-		}
-
-		.has-black-color {
-			color: var(--wp--preset--color--black) !important;
-		}
-
-		.has-cyan-bluish-gray-color {
-			color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
-
-		.has-white-color {
-			color: var(--wp--preset--color--white) !important;
-		}
-
-		.has-pale-pink-color {
-			color: var(--wp--preset--color--pale-pink) !important;
-		}
-
-		.has-vivid-red-color {
-			color: var(--wp--preset--color--vivid-red) !important;
-		}
-
-		.has-luminous-vivid-orange-color {
-			color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-amber-color {
-			color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
-
-		.has-light-green-cyan-color {
-			color: var(--wp--preset--color--light-green-cyan) !important;
-		}
-
-		.has-vivid-green-cyan-color {
-			color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
-
-		.has-pale-cyan-blue-color {
-			color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
-
-		.has-vivid-cyan-blue-color {
-			color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
-
-		.has-vivid-purple-color {
-			color: var(--wp--preset--color--vivid-purple) !important;
-		}
-
-		.has-black-background-color {
-			background-color: var(--wp--preset--color--black) !important;
-		}
-
-		.has-cyan-bluish-gray-background-color {
-			background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
-
-		.has-white-background-color {
-			background-color: var(--wp--preset--color--white) !important;
-		}
-
-		.has-pale-pink-background-color {
-			background-color: var(--wp--preset--color--pale-pink) !important;
-		}
-
-		.has-vivid-red-background-color {
-			background-color: var(--wp--preset--color--vivid-red) !important;
-		}
-
-		.has-luminous-vivid-orange-background-color {
-			background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-amber-background-color {
-			background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
-
-		.has-light-green-cyan-background-color {
-			background-color: var(--wp--preset--color--light-green-cyan) !important;
-		}
-
-		.has-vivid-green-cyan-background-color {
-			background-color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
-
-		.has-pale-cyan-blue-background-color {
-			background-color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
-
-		.has-vivid-cyan-blue-background-color {
-			background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
-
-		.has-vivid-purple-background-color {
-			background-color: var(--wp--preset--color--vivid-purple) !important;
-		}
-
-		.has-black-border-color {
-			border-color: var(--wp--preset--color--black) !important;
-		}
-
-		.has-cyan-bluish-gray-border-color {
-			border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
-		}
-
-		.has-white-border-color {
-			border-color: var(--wp--preset--color--white) !important;
-		}
-
-		.has-pale-pink-border-color {
-			border-color: var(--wp--preset--color--pale-pink) !important;
-		}
-
-		.has-vivid-red-border-color {
-			border-color: var(--wp--preset--color--vivid-red) !important;
-		}
-
-		.has-luminous-vivid-orange-border-color {
-			border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-amber-border-color {
-			border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
-		}
-
-		.has-light-green-cyan-border-color {
-			border-color: var(--wp--preset--color--light-green-cyan) !important;
-		}
-
-		.has-vivid-green-cyan-border-color {
-			border-color: var(--wp--preset--color--vivid-green-cyan) !important;
-		}
-
-		.has-pale-cyan-blue-border-color {
-			border-color: var(--wp--preset--color--pale-cyan-blue) !important;
-		}
-
-		.has-vivid-cyan-blue-border-color {
-			border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
-		}
-
-		.has-vivid-purple-border-color {
-			border-color: var(--wp--preset--color--vivid-purple) !important;
-		}
-
-		.has-vivid-cyan-blue-to-vivid-purple-gradient-background {
-			background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
-		}
-
-		.has-light-green-cyan-to-vivid-green-cyan-gradient-background {
-			background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
-		}
-
-		.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
-			background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
-		}
-
-		.has-luminous-vivid-orange-to-vivid-red-gradient-background {
-			background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
-		}
-
-		.has-very-light-gray-to-cyan-bluish-gray-gradient-background {
-			background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
-		}
-
-		.has-cool-to-warm-spectrum-gradient-background {
-			background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
-		}
-
-		.has-blush-light-purple-gradient-background {
-			background: var(--wp--preset--gradient--blush-light-purple) !important;
-		}
-
-		.has-blush-bordeaux-gradient-background {
-			background: var(--wp--preset--gradient--blush-bordeaux) !important;
-		}
-
-		.has-luminous-dusk-gradient-background {
-			background: var(--wp--preset--gradient--luminous-dusk) !important;
-		}
-
-		.has-pale-ocean-gradient-background {
-			background: var(--wp--preset--gradient--pale-ocean) !important;
-		}
-
-		.has-electric-grass-gradient-background {
-			background: var(--wp--preset--gradient--electric-grass) !important;
-		}
-
-		.has-midnight-gradient-background {
-			background: var(--wp--preset--gradient--midnight) !important;
-		}
-
-		.has-small-font-size {
-			font-size: var(--wp--preset--font-size--small) !important;
-		}
-
-		.has-medium-font-size {
-			font-size: var(--wp--preset--font-size--medium) !important;
-		}
-
-		.has-large-font-size {
-			font-size: var(--wp--preset--font-size--large) !important;
-		}
-
-		.has-x-large-font-size {
-			font-size: var(--wp--preset--font-size--x-large) !important;
-		}
-
-		.wp-block-navigation a:where(:not(.wp-element-button)) {
-			color: inherit;
-		}
-
-		:where(.wp-block-post-template.is-layout-flex) {
-			gap: 1.25em;
-		}
-
-		:where(.wp-block-post-template.is-layout-grid) {
-			gap: 1.25em;
-		}
-
-		:where(.wp-block-columns.is-layout-flex) {
-			gap: 2em;
-		}
-
-		:where(.wp-block-columns.is-layout-grid) {
-			gap: 2em;
-		}
-
-		.wp-block-pullquote {
-			font-size: 1.5em;
-			line-height: 1.6;
-		}
-	</style>
-	<link rel="stylesheet" id="redux-extendify-styles-css" href="{% static 'css/extendify-utilities.css' %}" media="all">
-	<link rel="stylesheet" id="contact-form-7-css" href="{% static 'css/styles.css' %}" media="all">
-	<link rel="stylesheet" id="google-fonts-css"
-		href="//fonts.googleapis.com/css2?family=Inter%3Awght%40300%3B400%3B500%3B600%3B700%3B900&amp;display=swap&amp;ver=6.4.2"
-		media="all">
-	<link rel="stylesheet" id="font-awesomes-css" href="{% static 'css/all.min.css' %}" media="all">
-	<link rel="stylesheet" id="select2-css" href="{% static 'css/select2.min.css' %}" media="all">
-	<link rel="stylesheet" id="bootstrap-css" href="{% static 'css/bootstrap.min.css' %}" media="all">
-	<link rel="stylesheet" id="nice-select-css" href="{% static 'css/nice-select.min.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-core-css" href="{% static 'css/core.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-custom-css" href="{% static 'css/theme-style.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-style-css" href="{% static 'css/style12.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-responsive-css" href="{% static 'css/theme-responsive.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-theme-options-style-css" href="{% static 'css/theme_options_style.css' %}" media="all">
-	<style id="zuzu-theme-options-style-inline-css">
-		.site-branding,
-		.site-logo {
-			max-width: 115px;
-		}
-
-		@media (max-width: 680px) {
-
-			.site-branding,
-			.site-logo {
-				max-width: 115px;
-			}
-		}
-
-		/** #header{
-   margin: 0 auto;
- }**/
-		:root {
-			--accent-color: rgba(114, 79, 229, 1);
-			--accent-color-2: rgba(114, 79, 229, 1);
-			--heading-color: rgba(19, 17, 26, 1);
-			--text-color: rgba(19, 17, 26, 0.8);
-		}
-
-		body {
-			background-color: rgba(255, 255, 255, 1);
-		}
-	</style>
-	<link rel="stylesheet" id="elementor-icons-css" href="{% static 'css/elementor-icons.min.css' %}" media="all">
-	<link rel="stylesheet" id="elementor-frontend-css" href="{% static 'css/frontend-lite.min.css' %}" media="all">
-	<link rel="stylesheet" id="swiper-css" href="{% static 'css/swiper.min.css' %}" media="all">
-	<link rel="stylesheet" id="elementor-post-7-css" href="{% static 'css/post-7.css' %}" media="all">
-	<link rel="stylesheet" id="mas-addons-elementor-animations-css" href="{% static 'css/animate.css' %}" media="all">
-	<link rel="stylesheet" id="slick-css" href="{% static 'css/slick.css' %}" media="all">
-	<link rel="stylesheet" id="owl-carousel-css" href="{% static 'css/owl.carousel.min.css' %}" media="all">
-	<link rel="stylesheet" id="magnific-popup-css" href="{% static 'css/magnific-popup.css' %}" media="all">
-	<link rel="stylesheet" id="mas-addons-css" href="{% static 'css/addons_1.css' %}" media="all">
-	<link rel="stylesheet" id="mas-crivite-button-css" href="{% static 'css/creative-button.css' %}" media="all">
-	<link rel="stylesheet" id="mas-group-image-css" href="{% static 'css/group-image.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-helper-addons-css" href="{% static 'css/addons.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-woocommerce-css" href="{% static 'css/zuzu-woocommerce.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-custom-fonts-css" href="{% static 'css/custom-fonts.css' %}" media="all">
-	<link rel="stylesheet" id="zuzu-css-css" href="{% static 'css/zuzu.css' %}" media="all">
-	<link rel="stylesheet" id="elementor-post-9-css" href="{% static 'css/post-9.css' %}" media="all">
-	<link rel="stylesheet" id="google-fonts-1-css"
-		href="https://fonts.googleapis.com/css?family=Inter%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CCabin%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPublic+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=swap&amp;ver=6.4.2"
-		media="all">
-	<link rel="stylesheet" id="elementor-icons-shared-0-css" href="{% static 'css/fontawesome.min.css' %}" media="all">
-	<link rel="stylesheet" id="elementor-icons-fa-solid-css" href="{% static 'css/solid.min.css' %}" media="all">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-	<script src="{% static 'js/jquery.min.js' %}" id="jquery-core-js"></script>
-	<script src="{% static 'js/jquery-migrate.min.js' %}" id="jquery-migrate-js"></script>
-	<script src="{% static 'js/slick.js' %}" id="slick-js"></script>
-	<script src="{% static 'js/owl.carousel.min.js' %}" id="owl-carousel-js"></script>
-	<script src="{% static 'js/isotope.pkgd.min.js' %}" id="isotope-js"></script>
-	<script src="{% static 'js/packery-mode.pkgd.min.js' %}" id="packery-js"></script>
-	<script src="{% static 'js/addon.js' %}" id="mas-addons-js"></script>
-	<link rel="https://api.w.org/" href="https://mthemeus.com/demos/wp/zuzu/wp-json/">
-	<link rel="alternate" type="application/json" href="">
-	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="">
-	<meta name="generator" content="WordPress 6.4.2">
-	<link rel="canonical" href="">
-	<link rel="shortlink" href="">
-	<link rel="alternate" type="application/json+oembed"
-		href="">
-	<link rel="alternate" type="text/xml+oembed"
-		href="">
-	<meta name="generator" content="Redux 4.4.4">
-	<meta name="bmi-version" content="1.2.8">
-	<meta name="generator"
-		content="Elementor 3.13.4; features: e_dom_optimization, e_optimized_assets_loading, e_optimized_css_loading, a11y_improvements, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
-	<link rel="icon" href="images/fav-icon.png" sizes="32x32">
-	<link rel="icon" href="images/fav-icon.png" sizes="192x192">
-	<link rel="apple-touch-icon" href="images/fav-icon.png">
-	<meta name="msapplication-TileImage"
-		content="https://mthemeus.com/demos/wp/zuzu/wp-content/uploads/2023/03/fav-icon.png">
-	<style id="zuzu-dynamic-css" title="dynamic-css" class="redux-options-output">
-		body {
-			font-family: Inter;
-			font-weight: 400;
-			font-style: normal;
-		}
-
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: Inter;
-			font-weight: 700;
-			font-style: normal;
-		}
-	</style>
-	<script src="{% static 'js/wp-emoji-release.min.js' %}" defer=""></script>
-</head>
-
-
+{% load humanize %}
+{% block content %}
 <body
 	class="home page-template page-template-elementor_header_footer page page-id-9 no-sidebar elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-9">
 
@@ -634,7 +106,7 @@
 																	
 																	<li
 																		class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16091  ">
-																		<a href="#">Our Plans</a>
+																		<a href="{% url "core:plans" %}">Our Plans</a>
 																	
 																	</li>
 																	<li
@@ -647,11 +119,19 @@
 																		<a href="#">FAQs</a>
 																		
 																	</li>
+																	{% if user.is_authenticated %}
+																	<li
+																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-16337  ">
+																		<a href="{% url "core:dashboard" %}">Dashboard</a>
+																		
+																	</li>
+																	{% else %}
 																	<li
 																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-16337  ">
 																		<a href="{% url "userauths:sign-in" %}">Login</a>
 																		
 																	</li>
+																	{% endif %}
 																	<li
 																		class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-16534  ">
 																		<a href="{% url "userauths:sign-up" %}">Create Account</a>
@@ -664,11 +144,19 @@
 																<a
 																	href="">Blog</a>
 															</li>
+															{% if user.is_authenticated %}
+															<li
+																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16060  ">
+																<a
+																	href="{% url "core:dashboard" %}">Dashboard</a>
+															</li>
+															{% else %}
 															<li
 																class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16060  ">
 																<a
 																	href="{% url "userauths:sign-in" %}">Login</a>
 															</li>
+															{% endif %}
 														</ul>
 													</div>
 												</nav><!-- #site-navigation -->
@@ -823,11 +311,7 @@
 															www.youtube.com\="" embed\=""
 															szeflivnhh8?feature="oembed&quot;,&quot;modalOptions&quot;:{&quot;id&quot;:&quot;elementor-lightbox-9eb5439&quot;,&quot;entranceAnimation&quot;:&quot;&quot;,&quot;entranceAnimation_tablet&quot;:&quot;&quot;,&quot;entranceAnimation_mobile&quot;:&quot;&quot;,&quot;videoAspectRatio&quot;:&quot;169&quot;}}&quot;">
 
-															<span class="icon-before  btn-icon"><i aria-hidden="true"
-																	class="fas fa-play"></i></span>
-															<span class="hover-animation"></span>
-															<span class="content">
-																How it works </span>
+															
 
 														</div>
 													</div>
@@ -1050,7 +534,7 @@
 												mas_addons_sticky":"no"}"="" data-widget_type="heading.default">
 												<div class="elementor-widget-container">
 													<h2 class="elementor-heading-title elementor-size-default">Earn up
-														to 12% BNB cashback every time</h2>
+														to 12% on your investments every time</h2>
 												</div>
 											</div>
 											<div class="elementor-element elementor-element-74e6306 mas-addons-sticky-no elementor-widget elementor-widget-text-editor"
@@ -1113,7 +597,7 @@
 																			fill="white"></path>
 																	</svg> </span>
 																<span class="mas-list-group-text">
-																	The easiest way to spend crypto worldwide </span>
+																	The easiest way to invest in crypto worldwide </span>
 															</li>
 															<li class="mas-list-group-item mas-icon-left">
 																<span class="mas-list-group-icon no">
@@ -1126,7 +610,7 @@
 																			fill="white"></path>
 																	</svg> </span>
 																<span class="mas-list-group-text">
-																	The easiest way to spend crypto worldwide </span>
+																	The fastest way to grow your portflio </span>
 															</li>
 															<li class="mas-list-group-item mas-icon-left">
 																<span class="mas-list-group-icon no">
@@ -1139,7 +623,7 @@
 																			fill="white"></path>
 																	</svg> </span>
 																<span class="mas-list-group-text">
-																	The easiest way to spend crypto worldwide </span>
+																	The safest way to save crypto assets </span>
 															</li>
 														</ul>
 													</div>
@@ -1176,34 +660,7 @@
 					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-97db615"
 						data-id="97db615" data-element_type="column">
 						<div class="elementor-widget-wrap elementor-element-populated">
-							<section
-								class="elementor-section elementor-inner-section elementor-element elementor-element-d384c80 elementor-section-content-space-between elementor-section-boxed elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
-								data-id="d384c80" data-element_type="section" data-settings="{"
-								mas_addons_sticky":"no"}"="">
-								<div class="elementor-container elementor-column-gap-default">
-									<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-931d4ba"
-										data-id="931d4ba" data-element_type="column">
-										<div class="elementor-widget-wrap elementor-element-populated">
-											<div class="elementor-element elementor-element-65902c7 mas-addons-sticky-no elementor-widget elementor-widget-heading"
-												data-id="65902c7" data-element_type="widget" data-settings="{"
-												mas_addons_sticky":"no"}"="" data-widget_type="heading.default">
-												<div class="elementor-widget-container">
-													<h2 class="elementor-heading-title elementor-size-default">Secure
-														solutions for your digital assets and money</h2>
-												</div>
-											</div>
-											<div class="elementor-element elementor-element-6498c4c mas-addons-sticky-no elementor-widget elementor-widget-text-editor"
-												data-id="6498c4c" data-element_type="widget" data-settings="{"
-												mas_addons_sticky":"no"}"="" data-widget_type="text-editor.default">
-												<div class="elementor-widget-container">
-													With Bittradexchange, you can Invest, store and trade 40+ crypto assets at
-													competitive prices and store them securely in one convenient place.
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</section>
+							
 							<section
 								class="elementor-section elementor-inner-section elementor-element elementor-element-16e6324 elementor-section-content-space-between elementor-section-boxed elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
 								data-id="16e6324" data-element_type="section" data-settings="{"
@@ -1247,8 +704,8 @@
 
 														<div class="mas-addons-feature-content-wrap">
 															<div class="mas-addons-feature-content">
-																<h4 class="mas-addons-feature-title">Free currency
-																	exchange <br> transactions per month</h4>
+																<h4 class="mas-addons-feature-title">Quick payout
+																	on your <br> Investments </h4>
 
 
 
@@ -1325,7 +782,7 @@
 
 														<div class="mas-addons-feature-content-wrap">
 															<div class="mas-addons-feature-content">
-																<h4 class="mas-addons-feature-title">Buy and sell
+																<h4 class="mas-addons-feature-title">Invest in
 																	digital currencies <br> domestically &amp;
 																	internationally</h4>
 
@@ -1397,6 +854,79 @@
 								</div>
 							</section>
 							<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-d384c80 elementor-section-content-space-between elementor-section-boxed elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
+							data-id="d384c80" data-element_type="section" data-settings="{"
+							mas_addons_sticky":"no"}"="">
+							<div class="elementor-container elementor-column-gap-default">
+								<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-931d4ba"
+									data-id="931d4ba" data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-65902c7 mas-addons-sticky-no elementor-widget elementor-widget-heading"
+											data-id="65902c7" data-element_type="widget" data-settings="{"
+											mas_addons_sticky":"no"}"="" data-widget_type="heading.default">
+											<div class="elementor-widget-container">
+												<h2 class="elementor-heading-title elementor-size-default">Our Investment Plans</h2>
+											</div>
+										</div>
+										<div class="elementor-element elementor-element-6498c4c mas-addons-sticky-no elementor-widget elementor-widget-text-editor"
+											data-id="6498c4c" data-element_type="widget" data-settings="{"
+											mas_addons_sticky":"no"}"="" data-widget_type="text-editor.default">
+											<div class="elementor-widget-container">
+												With Bittradexchange, you can Invest, store and trade 40+ crypto assets at
+												competitive prices and store them securely in one convenient place.
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+							<section
+							class="elementor-section elementor-inner-section elementor-element elementor-element-16e6324 elementor-section-content-space-between elementor-section-boxed elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
+							data-id="16e6324" data-element_type="section" data-settings="{"
+							mas_addons_sticky":"no"}"="">
+							<div class="elementor-container elementor-column-gap-default">
+								{% for p in plan  %}
+								<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-826657d"
+									data-id="826657d"  data-element_type="column">
+									<div class="elementor-widget-wrap elementor-element-populated">
+										<div class="elementor-element elementor-element-db7ee34 mas-addons-sticky-no elementor-widget elementor-widget-mas-addons-icon-box"
+											data-id="db7ee34" data-element_type="widget" data-settings="{"
+											mas_addons_sticky":"no"}"=""
+											data-widget_type="mas-addons-icon-box.default">
+											<div class="elementor-widget-container">
+												<!-- box link  -->
+												<!-- box link  -->
+												<div
+													class="mas-addons-feature-box-item mas-addons-feature-icon-left" style="text-align: center;" >
+
+													
+
+													<div class="mas-addons-feature-content-wrap" style="background-color: #1a1a1a; border-radius: 10px; ">
+														<div class="mas-addons-feature-content" style="margin-top: 20px;">
+															<h3 class="mas-addons-feature-title">{{p.title}}</h3><br>
+															<h6 class="mas-addons-feature-title" style="font-size: 15px;">Mininimum amount: ${{p.least_amount|intcomma}}</h6><br>
+															<h6 class="mas-addons-feature-title" style="font-size: 15px;">Maximum amount: ${{p.max_amount|intcomma}}</h6><br>
+															<h6 class="mas-addons-feature-title" style="font-size: 15px;">Profit: {{p.percentage_return}}% {{p.interval}}</h6><br>
+															<h6 class="mas-addons-feature-title" style="font-size: 15px;">Duration Of Plan: {{p.interval}}</h6><br>
+															<a class="mas-creative-btn mas-stl--hermosa mas-eft--exploit"
+											href="{% url "core:plan-detail" p.pid %}"
+											rel="nofollow"><span>Activate Plan</span></a>
+														</div>
+													</div>
+
+												</div>
+												<!-- box link  -->
+												<!-- box link  -->
+											</div>
+										</div>
+									</div>
+								</div>
+
+								{% endfor %}
+							</div>
+						</section>
+						
+							<section
 								class="elementor-section elementor-inner-section elementor-element elementor-element-294f4e2 elementor-section-content-space-between elementor-section-boxed elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
 								data-id="294f4e2" data-element_type="section" data-settings="{"
 								mas_addons_sticky":"no"}"="">
@@ -1408,10 +938,7 @@
 												data-id="f088eca" data-element_type="widget" data-settings="{"
 												mas_addons_sticky":"no"}"="" data-widget_type="image.default">
 												<div class="elementor-widget-container">
-													<img loading="lazy" decoding="async" width="1296" height="804"
-														src="{% static 'images/card-deshbord.png' %}"
-														class="attachment-full size-full wp-image-2947" alt=""
-														sizes="(max-width: 1296px) 100vw, 1296px">
+													<div class="cryptohopper-web-widget" data-id="9" data-theme="dark" data-coins="bitcoin,ethereum,tether,bnb,xrp,solana,usd-coin,cardano,dogecoin,litecoin" data-multi_currencies="EUR,USD"></div>
 												</div>
 											</div>
 										</div>
@@ -1422,122 +949,19 @@
 					</div>
 				</div>
 			</section>
-			<section
-				class="elementor-section elementor-top-section elementor-element elementor-element-b06dee5 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
-				data-id="b06dee5" data-element_type="section" data-settings="{"
-				stretch_section":"section-stretched","background_background":"classic","mas_addons_sticky":"no"}"="">
-				<div class="elementor-container elementor-column-gap-default">
-					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e4ef852"
-						data-id="e4ef852" data-element_type="column">
-						<div class="elementor-widget-wrap elementor-element-populated">
-							<div class="elementor-element elementor-element-884a850 zuzu-text-icon-rotate  mas-addons-sticky-no elementor-widget elementor-widget-Zuzu_Text_Slider"
-								data-id="884a850" data-element_type="widget" data-settings="{"
-								per_coulmn":3,"per_coulmn_tablet":2,"per_coulmn_mobile":1,"slide_scroll":1,"mas_addons_sticky":"no"}"=""
-								data-widget_type="Zuzu_Text_Slider.default">
-								<div class="elementor-widget-container">
-
-									<div dir="rtl">
-										<div class="zuzu-text-slider" data-settings="{"
-											autoplay":false,"slider_rtl":true,"speed":"3000","slide_scroll":1,"per_coulmn":3,"per_coulmn_tablet":2,"per_coulmn_mobile":1}"="">
-											<div class="zuzu-text-slider-data">
-
-												<div class="zuzu-text-slider-icon">
-													<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-														viewBox="0 0 40 40" fill="none">
-														<circle cx="20" cy="20" r="20" fill="#13111A"></circle>
-														<path
-															d="M25.2675 22.1761C25.1709 21.849 25.0537 21.5644 24.916 21.3226C24.7785 21.0806 24.5814 20.8446 24.3246 20.6137C24.068 20.383 23.8372 20.1971 23.6326 20.0558C23.428 19.9144 23.1471 19.7564 22.7899 19.5814C22.4329 19.4065 22.1502 19.2763 21.942 19.1907C21.7336 19.1052 21.432 18.988 21.0376 18.8392C20.688 18.7053 20.4276 18.603 20.2563 18.5323C20.0852 18.4616 19.8602 18.3612 19.5812 18.2309C19.3022 18.1008 19.0939 17.9854 18.9562 17.885C18.8186 17.7847 18.6717 17.6619 18.5154 17.5168C18.3591 17.3718 18.2494 17.2174 18.1861 17.0537C18.1229 16.89 18.0913 16.7113 18.0913 16.5179C18.0913 16.012 18.3144 15.599 18.7608 15.2791C19.2073 14.9593 19.784 14.7993 20.4909 14.7993C20.8033 14.7993 21.1217 14.842 21.4451 14.9276C21.7686 15.0133 22.0458 15.1098 22.2765 15.2177C22.5073 15.3257 22.7249 15.4448 22.9296 15.5749C23.1342 15.7052 23.2792 15.8037 23.3649 15.8706C23.4505 15.9376 23.5047 15.9822 23.5268 16.0046C23.6236 16.079 23.7238 16.105 23.828 16.0828C23.9396 16.0753 24.0252 16.0157 24.0849 15.9042L24.9891 14.2747C25.0783 14.126 25.0599 13.9846 24.9333 13.8506C24.8886 13.8059 24.833 13.7539 24.7656 13.6943C24.6988 13.6348 24.5536 13.5269 24.3302 13.3706C24.1071 13.2144 23.8708 13.0748 23.6217 12.9521C23.3724 12.8294 23.0486 12.7047 22.6505 12.5783C22.2526 12.4516 21.8414 12.3661 21.4172 12.3215V10.3571C21.4172 10.253 21.3838 10.1674 21.317 10.1004C21.2501 10.0336 21.1645 10 21.0601 10H19.5533C19.4566 10 19.3729 10.0353 19.3022 10.106C19.2315 10.1767 19.1962 10.2604 19.1962 10.3571V12.3661C18.028 12.5892 17.0793 13.0878 16.3501 13.8616C15.621 14.6355 15.2563 15.5356 15.2563 16.5625C15.2563 16.8676 15.2881 17.1577 15.3513 17.4329C15.4145 17.7083 15.4927 17.9557 15.5857 18.1752C15.6787 18.3948 15.8108 18.6105 15.9819 18.8226C16.153 19.0346 16.3149 19.217 16.4674 19.3694C16.62 19.5218 16.819 19.68 17.0645 19.8437C17.3101 20.0074 17.5203 20.1396 17.6952 20.24C17.8701 20.3401 18.1026 20.4558 18.3927 20.5857C18.6829 20.716 18.9118 20.8145 19.0792 20.8816C19.2466 20.9485 19.4754 21.0416 19.7657 21.1604C20.1674 21.3166 20.4651 21.4376 20.6585 21.5232C20.8521 21.6088 21.0976 21.7278 21.3954 21.8804C21.6929 22.0328 21.9104 22.1723 22.0482 22.2988C22.1858 22.4254 22.3104 22.5816 22.4221 22.7676C22.5338 22.9536 22.5897 23.1507 22.5897 23.3592C22.5897 23.947 22.3609 24.4008 21.9032 24.7205C21.4457 25.0405 20.9154 25.2005 20.3128 25.2005C20.0377 25.2005 19.7622 25.1709 19.487 25.1114C18.5197 24.9177 17.6157 24.4526 16.7749 23.7161L16.7526 23.6938C16.6856 23.6121 16.5963 23.5786 16.4848 23.5936C16.3657 23.6084 16.2801 23.6531 16.2281 23.7277L15.0785 25.2342C14.9668 25.383 14.9744 25.5355 15.1008 25.6918C15.1381 25.7365 15.2032 25.8036 15.2961 25.8927C15.3893 25.9822 15.5623 26.1215 15.8152 26.3116C16.0681 26.5014 16.3434 26.6797 16.6411 26.8474C16.9388 27.0147 17.3163 27.1802 17.774 27.344C18.2317 27.5074 18.7059 27.6227 19.197 27.6896V29.6428C19.197 29.7396 19.2324 29.8233 19.303 29.894C19.3737 29.9648 19.4574 30 19.5541 30H21.0609C21.1653 30 21.2509 29.9666 21.3178 29.8997C21.3847 29.8328 21.418 29.7472 21.418 29.6428V27.6897C22.6012 27.4963 23.5629 26.9884 24.3032 26.1662C25.0435 25.344 25.4138 24.3637 25.4138 23.2254C25.4134 22.8534 25.3651 22.5037 25.2675 22.1761Z"
-															fill="white"></path>
-													</svg>
-												</div>
-
-												<h3>
-													BUY, SELL, &amp; Spend crypto anywhere </h3>
-											</div>
-											<div class="zuzu-text-slider-data">
-
-												<div class="zuzu-text-slider-icon">
-													<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-														viewBox="0 0 40 40" fill="none">
-														<circle cx="20" cy="20" r="20" fill="#13111A"></circle>
-														<path
-															d="M25.2675 22.1761C25.1709 21.849 25.0537 21.5644 24.916 21.3226C24.7785 21.0806 24.5814 20.8446 24.3246 20.6137C24.068 20.383 23.8372 20.1971 23.6326 20.0558C23.428 19.9144 23.1471 19.7564 22.7899 19.5814C22.4329 19.4065 22.1502 19.2763 21.942 19.1907C21.7336 19.1052 21.432 18.988 21.0376 18.8392C20.688 18.7053 20.4276 18.603 20.2563 18.5323C20.0852 18.4616 19.8602 18.3612 19.5812 18.2309C19.3022 18.1008 19.0939 17.9854 18.9562 17.885C18.8186 17.7847 18.6717 17.6619 18.5154 17.5168C18.3591 17.3718 18.2494 17.2174 18.1861 17.0537C18.1229 16.89 18.0913 16.7113 18.0913 16.5179C18.0913 16.012 18.3144 15.599 18.7608 15.2791C19.2073 14.9593 19.784 14.7993 20.4909 14.7993C20.8033 14.7993 21.1217 14.842 21.4451 14.9276C21.7686 15.0133 22.0458 15.1098 22.2765 15.2177C22.5073 15.3257 22.7249 15.4448 22.9296 15.5749C23.1342 15.7052 23.2792 15.8037 23.3649 15.8706C23.4505 15.9376 23.5047 15.9822 23.5268 16.0046C23.6236 16.079 23.7238 16.105 23.828 16.0828C23.9396 16.0753 24.0252 16.0157 24.0849 15.9042L24.9891 14.2747C25.0783 14.126 25.0599 13.9846 24.9333 13.8506C24.8886 13.8059 24.833 13.7539 24.7656 13.6943C24.6988 13.6348 24.5536 13.5269 24.3302 13.3706C24.1071 13.2144 23.8708 13.0748 23.6217 12.9521C23.3724 12.8294 23.0486 12.7047 22.6505 12.5783C22.2526 12.4516 21.8414 12.3661 21.4172 12.3215V10.3571C21.4172 10.253 21.3838 10.1674 21.317 10.1004C21.2501 10.0336 21.1645 10 21.0601 10H19.5533C19.4566 10 19.3729 10.0353 19.3022 10.106C19.2315 10.1767 19.1962 10.2604 19.1962 10.3571V12.3661C18.028 12.5892 17.0793 13.0878 16.3501 13.8616C15.621 14.6355 15.2563 15.5356 15.2563 16.5625C15.2563 16.8676 15.2881 17.1577 15.3513 17.4329C15.4145 17.7083 15.4927 17.9557 15.5857 18.1752C15.6787 18.3948 15.8108 18.6105 15.9819 18.8226C16.153 19.0346 16.3149 19.217 16.4674 19.3694C16.62 19.5218 16.819 19.68 17.0645 19.8437C17.3101 20.0074 17.5203 20.1396 17.6952 20.24C17.8701 20.3401 18.1026 20.4558 18.3927 20.5857C18.6829 20.716 18.9118 20.8145 19.0792 20.8816C19.2466 20.9485 19.4754 21.0416 19.7657 21.1604C20.1674 21.3166 20.4651 21.4376 20.6585 21.5232C20.8521 21.6088 21.0976 21.7278 21.3954 21.8804C21.6929 22.0328 21.9104 22.1723 22.0482 22.2988C22.1858 22.4254 22.3104 22.5816 22.4221 22.7676C22.5338 22.9536 22.5897 23.1507 22.5897 23.3592C22.5897 23.947 22.3609 24.4008 21.9032 24.7205C21.4457 25.0405 20.9154 25.2005 20.3128 25.2005C20.0377 25.2005 19.7622 25.1709 19.487 25.1114C18.5197 24.9177 17.6157 24.4526 16.7749 23.7161L16.7526 23.6938C16.6856 23.6121 16.5963 23.5786 16.4848 23.5936C16.3657 23.6084 16.2801 23.6531 16.2281 23.7277L15.0785 25.2342C14.9668 25.383 14.9744 25.5355 15.1008 25.6918C15.1381 25.7365 15.2032 25.8036 15.2961 25.8927C15.3893 25.9822 15.5623 26.1215 15.8152 26.3116C16.0681 26.5014 16.3434 26.6797 16.6411 26.8474C16.9388 27.0147 17.3163 27.1802 17.774 27.344C18.2317 27.5074 18.7059 27.6227 19.197 27.6896V29.6428C19.197 29.7396 19.2324 29.8233 19.303 29.894C19.3737 29.9648 19.4574 30 19.5541 30H21.0609C21.1653 30 21.2509 29.9666 21.3178 29.8997C21.3847 29.8328 21.418 29.7472 21.418 29.6428V27.6897C22.6012 27.4963 23.5629 26.9884 24.3032 26.1662C25.0435 25.344 25.4138 24.3637 25.4138 23.2254C25.4134 22.8534 25.3651 22.5037 25.2675 22.1761Z"
-															fill="white"></path>
-													</svg>
-												</div>
-
-												<h3>
-													BUY, SELL, &amp; Spend crypto anywhere </h3>
-											</div>
-											<div class="zuzu-text-slider-data">
-
-												<div class="zuzu-text-slider-icon">
-													<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-														viewBox="0 0 40 40" fill="none">
-														<circle cx="20" cy="20" r="20" fill="#13111A"></circle>
-														<path
-															d="M25.2675 22.1761C25.1709 21.849 25.0537 21.5644 24.916 21.3226C24.7785 21.0806 24.5814 20.8446 24.3246 20.6137C24.068 20.383 23.8372 20.1971 23.6326 20.0558C23.428 19.9144 23.1471 19.7564 22.7899 19.5814C22.4329 19.4065 22.1502 19.2763 21.942 19.1907C21.7336 19.1052 21.432 18.988 21.0376 18.8392C20.688 18.7053 20.4276 18.603 20.2563 18.5323C20.0852 18.4616 19.8602 18.3612 19.5812 18.2309C19.3022 18.1008 19.0939 17.9854 18.9562 17.885C18.8186 17.7847 18.6717 17.6619 18.5154 17.5168C18.3591 17.3718 18.2494 17.2174 18.1861 17.0537C18.1229 16.89 18.0913 16.7113 18.0913 16.5179C18.0913 16.012 18.3144 15.599 18.7608 15.2791C19.2073 14.9593 19.784 14.7993 20.4909 14.7993C20.8033 14.7993 21.1217 14.842 21.4451 14.9276C21.7686 15.0133 22.0458 15.1098 22.2765 15.2177C22.5073 15.3257 22.7249 15.4448 22.9296 15.5749C23.1342 15.7052 23.2792 15.8037 23.3649 15.8706C23.4505 15.9376 23.5047 15.9822 23.5268 16.0046C23.6236 16.079 23.7238 16.105 23.828 16.0828C23.9396 16.0753 24.0252 16.0157 24.0849 15.9042L24.9891 14.2747C25.0783 14.126 25.0599 13.9846 24.9333 13.8506C24.8886 13.8059 24.833 13.7539 24.7656 13.6943C24.6988 13.6348 24.5536 13.5269 24.3302 13.3706C24.1071 13.2144 23.8708 13.0748 23.6217 12.9521C23.3724 12.8294 23.0486 12.7047 22.6505 12.5783C22.2526 12.4516 21.8414 12.3661 21.4172 12.3215V10.3571C21.4172 10.253 21.3838 10.1674 21.317 10.1004C21.2501 10.0336 21.1645 10 21.0601 10H19.5533C19.4566 10 19.3729 10.0353 19.3022 10.106C19.2315 10.1767 19.1962 10.2604 19.1962 10.3571V12.3661C18.028 12.5892 17.0793 13.0878 16.3501 13.8616C15.621 14.6355 15.2563 15.5356 15.2563 16.5625C15.2563 16.8676 15.2881 17.1577 15.3513 17.4329C15.4145 17.7083 15.4927 17.9557 15.5857 18.1752C15.6787 18.3948 15.8108 18.6105 15.9819 18.8226C16.153 19.0346 16.3149 19.217 16.4674 19.3694C16.62 19.5218 16.819 19.68 17.0645 19.8437C17.3101 20.0074 17.5203 20.1396 17.6952 20.24C17.8701 20.3401 18.1026 20.4558 18.3927 20.5857C18.6829 20.716 18.9118 20.8145 19.0792 20.8816C19.2466 20.9485 19.4754 21.0416 19.7657 21.1604C20.1674 21.3166 20.4651 21.4376 20.6585 21.5232C20.8521 21.6088 21.0976 21.7278 21.3954 21.8804C21.6929 22.0328 21.9104 22.1723 22.0482 22.2988C22.1858 22.4254 22.3104 22.5816 22.4221 22.7676C22.5338 22.9536 22.5897 23.1507 22.5897 23.3592C22.5897 23.947 22.3609 24.4008 21.9032 24.7205C21.4457 25.0405 20.9154 25.2005 20.3128 25.2005C20.0377 25.2005 19.7622 25.1709 19.487 25.1114C18.5197 24.9177 17.6157 24.4526 16.7749 23.7161L16.7526 23.6938C16.6856 23.6121 16.5963 23.5786 16.4848 23.5936C16.3657 23.6084 16.2801 23.6531 16.2281 23.7277L15.0785 25.2342C14.9668 25.383 14.9744 25.5355 15.1008 25.6918C15.1381 25.7365 15.2032 25.8036 15.2961 25.8927C15.3893 25.9822 15.5623 26.1215 15.8152 26.3116C16.0681 26.5014 16.3434 26.6797 16.6411 26.8474C16.9388 27.0147 17.3163 27.1802 17.774 27.344C18.2317 27.5074 18.7059 27.6227 19.197 27.6896V29.6428C19.197 29.7396 19.2324 29.8233 19.303 29.894C19.3737 29.9648 19.4574 30 19.5541 30H21.0609C21.1653 30 21.2509 29.9666 21.3178 29.8997C21.3847 29.8328 21.418 29.7472 21.418 29.6428V27.6897C22.6012 27.4963 23.5629 26.9884 24.3032 26.1662C25.0435 25.344 25.4138 24.3637 25.4138 23.2254C25.4134 22.8534 25.3651 22.5037 25.2675 22.1761Z"
-															fill="white"></path>
-													</svg>
-												</div>
-
-												<h3>
-													BUY, SELL, &amp; Spend crypto anywhere </h3>
-											</div>
-											<div class="zuzu-text-slider-data">
-
-												<div class="zuzu-text-slider-icon">
-													<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-														viewBox="0 0 40 40" fill="none">
-														<circle cx="20" cy="20" r="20" fill="#13111A"></circle>
-														<path
-															d="M25.2675 22.1761C25.1709 21.849 25.0537 21.5644 24.916 21.3226C24.7785 21.0806 24.5814 20.8446 24.3246 20.6137C24.068 20.383 23.8372 20.1971 23.6326 20.0558C23.428 19.9144 23.1471 19.7564 22.7899 19.5814C22.4329 19.4065 22.1502 19.2763 21.942 19.1907C21.7336 19.1052 21.432 18.988 21.0376 18.8392C20.688 18.7053 20.4276 18.603 20.2563 18.5323C20.0852 18.4616 19.8602 18.3612 19.5812 18.2309C19.3022 18.1008 19.0939 17.9854 18.9562 17.885C18.8186 17.7847 18.6717 17.6619 18.5154 17.5168C18.3591 17.3718 18.2494 17.2174 18.1861 17.0537C18.1229 16.89 18.0913 16.7113 18.0913 16.5179C18.0913 16.012 18.3144 15.599 18.7608 15.2791C19.2073 14.9593 19.784 14.7993 20.4909 14.7993C20.8033 14.7993 21.1217 14.842 21.4451 14.9276C21.7686 15.0133 22.0458 15.1098 22.2765 15.2177C22.5073 15.3257 22.7249 15.4448 22.9296 15.5749C23.1342 15.7052 23.2792 15.8037 23.3649 15.8706C23.4505 15.9376 23.5047 15.9822 23.5268 16.0046C23.6236 16.079 23.7238 16.105 23.828 16.0828C23.9396 16.0753 24.0252 16.0157 24.0849 15.9042L24.9891 14.2747C25.0783 14.126 25.0599 13.9846 24.9333 13.8506C24.8886 13.8059 24.833 13.7539 24.7656 13.6943C24.6988 13.6348 24.5536 13.5269 24.3302 13.3706C24.1071 13.2144 23.8708 13.0748 23.6217 12.9521C23.3724 12.8294 23.0486 12.7047 22.6505 12.5783C22.2526 12.4516 21.8414 12.3661 21.4172 12.3215V10.3571C21.4172 10.253 21.3838 10.1674 21.317 10.1004C21.2501 10.0336 21.1645 10 21.0601 10H19.5533C19.4566 10 19.3729 10.0353 19.3022 10.106C19.2315 10.1767 19.1962 10.2604 19.1962 10.3571V12.3661C18.028 12.5892 17.0793 13.0878 16.3501 13.8616C15.621 14.6355 15.2563 15.5356 15.2563 16.5625C15.2563 16.8676 15.2881 17.1577 15.3513 17.4329C15.4145 17.7083 15.4927 17.9557 15.5857 18.1752C15.6787 18.3948 15.8108 18.6105 15.9819 18.8226C16.153 19.0346 16.3149 19.217 16.4674 19.3694C16.62 19.5218 16.819 19.68 17.0645 19.8437C17.3101 20.0074 17.5203 20.1396 17.6952 20.24C17.8701 20.3401 18.1026 20.4558 18.3927 20.5857C18.6829 20.716 18.9118 20.8145 19.0792 20.8816C19.2466 20.9485 19.4754 21.0416 19.7657 21.1604C20.1674 21.3166 20.4651 21.4376 20.6585 21.5232C20.8521 21.6088 21.0976 21.7278 21.3954 21.8804C21.6929 22.0328 21.9104 22.1723 22.0482 22.2988C22.1858 22.4254 22.3104 22.5816 22.4221 22.7676C22.5338 22.9536 22.5897 23.1507 22.5897 23.3592C22.5897 23.947 22.3609 24.4008 21.9032 24.7205C21.4457 25.0405 20.9154 25.2005 20.3128 25.2005C20.0377 25.2005 19.7622 25.1709 19.487 25.1114C18.5197 24.9177 17.6157 24.4526 16.7749 23.7161L16.7526 23.6938C16.6856 23.6121 16.5963 23.5786 16.4848 23.5936C16.3657 23.6084 16.2801 23.6531 16.2281 23.7277L15.0785 25.2342C14.9668 25.383 14.9744 25.5355 15.1008 25.6918C15.1381 25.7365 15.2032 25.8036 15.2961 25.8927C15.3893 25.9822 15.5623 26.1215 15.8152 26.3116C16.0681 26.5014 16.3434 26.6797 16.6411 26.8474C16.9388 27.0147 17.3163 27.1802 17.774 27.344C18.2317 27.5074 18.7059 27.6227 19.197 27.6896V29.6428C19.197 29.7396 19.2324 29.8233 19.303 29.894C19.3737 29.9648 19.4574 30 19.5541 30H21.0609C21.1653 30 21.2509 29.9666 21.3178 29.8997C21.3847 29.8328 21.418 29.7472 21.418 29.6428V27.6897C22.6012 27.4963 23.5629 26.9884 24.3032 26.1662C25.0435 25.344 25.4138 24.3637 25.4138 23.2254C25.4134 22.8534 25.3651 22.5037 25.2675 22.1761Z"
-															fill="white"></path>
-													</svg>
-												</div>
-
-												<h3>
-													BUY, SELL, &amp; Spend crypto anywhere </h3>
-											</div>
-											<div class="zuzu-text-slider-data">
-
-												<div class="zuzu-text-slider-icon">
-													<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-														viewBox="0 0 40 40" fill="none">
-														<circle cx="20" cy="20" r="20" fill="#13111A"></circle>
-														<path
-															d="M25.2675 22.1761C25.1709 21.849 25.0537 21.5644 24.916 21.3226C24.7785 21.0806 24.5814 20.8446 24.3246 20.6137C24.068 20.383 23.8372 20.1971 23.6326 20.0558C23.428 19.9144 23.1471 19.7564 22.7899 19.5814C22.4329 19.4065 22.1502 19.2763 21.942 19.1907C21.7336 19.1052 21.432 18.988 21.0376 18.8392C20.688 18.7053 20.4276 18.603 20.2563 18.5323C20.0852 18.4616 19.8602 18.3612 19.5812 18.2309C19.3022 18.1008 19.0939 17.9854 18.9562 17.885C18.8186 17.7847 18.6717 17.6619 18.5154 17.5168C18.3591 17.3718 18.2494 17.2174 18.1861 17.0537C18.1229 16.89 18.0913 16.7113 18.0913 16.5179C18.0913 16.012 18.3144 15.599 18.7608 15.2791C19.2073 14.9593 19.784 14.7993 20.4909 14.7993C20.8033 14.7993 21.1217 14.842 21.4451 14.9276C21.7686 15.0133 22.0458 15.1098 22.2765 15.2177C22.5073 15.3257 22.7249 15.4448 22.9296 15.5749C23.1342 15.7052 23.2792 15.8037 23.3649 15.8706C23.4505 15.9376 23.5047 15.9822 23.5268 16.0046C23.6236 16.079 23.7238 16.105 23.828 16.0828C23.9396 16.0753 24.0252 16.0157 24.0849 15.9042L24.9891 14.2747C25.0783 14.126 25.0599 13.9846 24.9333 13.8506C24.8886 13.8059 24.833 13.7539 24.7656 13.6943C24.6988 13.6348 24.5536 13.5269 24.3302 13.3706C24.1071 13.2144 23.8708 13.0748 23.6217 12.9521C23.3724 12.8294 23.0486 12.7047 22.6505 12.5783C22.2526 12.4516 21.8414 12.3661 21.4172 12.3215V10.3571C21.4172 10.253 21.3838 10.1674 21.317 10.1004C21.2501 10.0336 21.1645 10 21.0601 10H19.5533C19.4566 10 19.3729 10.0353 19.3022 10.106C19.2315 10.1767 19.1962 10.2604 19.1962 10.3571V12.3661C18.028 12.5892 17.0793 13.0878 16.3501 13.8616C15.621 14.6355 15.2563 15.5356 15.2563 16.5625C15.2563 16.8676 15.2881 17.1577 15.3513 17.4329C15.4145 17.7083 15.4927 17.9557 15.5857 18.1752C15.6787 18.3948 15.8108 18.6105 15.9819 18.8226C16.153 19.0346 16.3149 19.217 16.4674 19.3694C16.62 19.5218 16.819 19.68 17.0645 19.8437C17.3101 20.0074 17.5203 20.1396 17.6952 20.24C17.8701 20.3401 18.1026 20.4558 18.3927 20.5857C18.6829 20.716 18.9118 20.8145 19.0792 20.8816C19.2466 20.9485 19.4754 21.0416 19.7657 21.1604C20.1674 21.3166 20.4651 21.4376 20.6585 21.5232C20.8521 21.6088 21.0976 21.7278 21.3954 21.8804C21.6929 22.0328 21.9104 22.1723 22.0482 22.2988C22.1858 22.4254 22.3104 22.5816 22.4221 22.7676C22.5338 22.9536 22.5897 23.1507 22.5897 23.3592C22.5897 23.947 22.3609 24.4008 21.9032 24.7205C21.4457 25.0405 20.9154 25.2005 20.3128 25.2005C20.0377 25.2005 19.7622 25.1709 19.487 25.1114C18.5197 24.9177 17.6157 24.4526 16.7749 23.7161L16.7526 23.6938C16.6856 23.6121 16.5963 23.5786 16.4848 23.5936C16.3657 23.6084 16.2801 23.6531 16.2281 23.7277L15.0785 25.2342C14.9668 25.383 14.9744 25.5355 15.1008 25.6918C15.1381 25.7365 15.2032 25.8036 15.2961 25.8927C15.3893 25.9822 15.5623 26.1215 15.8152 26.3116C16.0681 26.5014 16.3434 26.6797 16.6411 26.8474C16.9388 27.0147 17.3163 27.1802 17.774 27.344C18.2317 27.5074 18.7059 27.6227 19.197 27.6896V29.6428C19.197 29.7396 19.2324 29.8233 19.303 29.894C19.3737 29.9648 19.4574 30 19.5541 30H21.0609C21.1653 30 21.2509 29.9666 21.3178 29.8997C21.3847 29.8328 21.418 29.7472 21.418 29.6428V27.6897C22.6012 27.4963 23.5629 26.9884 24.3032 26.1662C25.0435 25.344 25.4138 24.3637 25.4138 23.2254C25.4134 22.8534 25.3651 22.5037 25.2675 22.1761Z"
-															fill="white"></path>
-													</svg>
-												</div>
-
-												<h3>
-													BUY, SELL, &amp; Spend crypto anywhere </h3>
-											</div>
-											<div class="zuzu-text-slider-data">
-
-												<div class="zuzu-text-slider-icon">
-													<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
-														viewBox="0 0 40 40" fill="none">
-														<circle cx="20" cy="20" r="20" fill="#13111A"></circle>
-														<path
-															d="M25.2675 22.1761C25.1709 21.849 25.0537 21.5644 24.916 21.3226C24.7785 21.0806 24.5814 20.8446 24.3246 20.6137C24.068 20.383 23.8372 20.1971 23.6326 20.0558C23.428 19.9144 23.1471 19.7564 22.7899 19.5814C22.4329 19.4065 22.1502 19.2763 21.942 19.1907C21.7336 19.1052 21.432 18.988 21.0376 18.8392C20.688 18.7053 20.4276 18.603 20.2563 18.5323C20.0852 18.4616 19.8602 18.3612 19.5812 18.2309C19.3022 18.1008 19.0939 17.9854 18.9562 17.885C18.8186 17.7847 18.6717 17.6619 18.5154 17.5168C18.3591 17.3718 18.2494 17.2174 18.1861 17.0537C18.1229 16.89 18.0913 16.7113 18.0913 16.5179C18.0913 16.012 18.3144 15.599 18.7608 15.2791C19.2073 14.9593 19.784 14.7993 20.4909 14.7993C20.8033 14.7993 21.1217 14.842 21.4451 14.9276C21.7686 15.0133 22.0458 15.1098 22.2765 15.2177C22.5073 15.3257 22.7249 15.4448 22.9296 15.5749C23.1342 15.7052 23.2792 15.8037 23.3649 15.8706C23.4505 15.9376 23.5047 15.9822 23.5268 16.0046C23.6236 16.079 23.7238 16.105 23.828 16.0828C23.9396 16.0753 24.0252 16.0157 24.0849 15.9042L24.9891 14.2747C25.0783 14.126 25.0599 13.9846 24.9333 13.8506C24.8886 13.8059 24.833 13.7539 24.7656 13.6943C24.6988 13.6348 24.5536 13.5269 24.3302 13.3706C24.1071 13.2144 23.8708 13.0748 23.6217 12.9521C23.3724 12.8294 23.0486 12.7047 22.6505 12.5783C22.2526 12.4516 21.8414 12.3661 21.4172 12.3215V10.3571C21.4172 10.253 21.3838 10.1674 21.317 10.1004C21.2501 10.0336 21.1645 10 21.0601 10H19.5533C19.4566 10 19.3729 10.0353 19.3022 10.106C19.2315 10.1767 19.1962 10.2604 19.1962 10.3571V12.3661C18.028 12.5892 17.0793 13.0878 16.3501 13.8616C15.621 14.6355 15.2563 15.5356 15.2563 16.5625C15.2563 16.8676 15.2881 17.1577 15.3513 17.4329C15.4145 17.7083 15.4927 17.9557 15.5857 18.1752C15.6787 18.3948 15.8108 18.6105 15.9819 18.8226C16.153 19.0346 16.3149 19.217 16.4674 19.3694C16.62 19.5218 16.819 19.68 17.0645 19.8437C17.3101 20.0074 17.5203 20.1396 17.6952 20.24C17.8701 20.3401 18.1026 20.4558 18.3927 20.5857C18.6829 20.716 18.9118 20.8145 19.0792 20.8816C19.2466 20.9485 19.4754 21.0416 19.7657 21.1604C20.1674 21.3166 20.4651 21.4376 20.6585 21.5232C20.8521 21.6088 21.0976 21.7278 21.3954 21.8804C21.6929 22.0328 21.9104 22.1723 22.0482 22.2988C22.1858 22.4254 22.3104 22.5816 22.4221 22.7676C22.5338 22.9536 22.5897 23.1507 22.5897 23.3592C22.5897 23.947 22.3609 24.4008 21.9032 24.7205C21.4457 25.0405 20.9154 25.2005 20.3128 25.2005C20.0377 25.2005 19.7622 25.1709 19.487 25.1114C18.5197 24.9177 17.6157 24.4526 16.7749 23.7161L16.7526 23.6938C16.6856 23.6121 16.5963 23.5786 16.4848 23.5936C16.3657 23.6084 16.2801 23.6531 16.2281 23.7277L15.0785 25.2342C14.9668 25.383 14.9744 25.5355 15.1008 25.6918C15.1381 25.7365 15.2032 25.8036 15.2961 25.8927C15.3893 25.9822 15.5623 26.1215 15.8152 26.3116C16.0681 26.5014 16.3434 26.6797 16.6411 26.8474C16.9388 27.0147 17.3163 27.1802 17.774 27.344C18.2317 27.5074 18.7059 27.6227 19.197 27.6896V29.6428C19.197 29.7396 19.2324 29.8233 19.303 29.894C19.3737 29.9648 19.4574 30 19.5541 30H21.0609C21.1653 30 21.2509 29.9666 21.3178 29.8997C21.3847 29.8328 21.418 29.7472 21.418 29.6428V27.6897C22.6012 27.4963 23.5629 26.9884 24.3032 26.1662C25.0435 25.344 25.4138 24.3637 25.4138 23.2254C25.4134 22.8534 25.3651 22.5037 25.2675 22.1761Z"
-															fill="white"></path>
-													</svg>
-												</div>
-
-												<h3>
-													BUY, SELL, &amp; Spend crypto anywhere </h3>
-											</div>
-										</div>
-									</div>
-
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
+			<div
+			style="height:62px; overflow:hidden; background-color: #000000; box-sizing: border-box; border-radius: 4px; text-align: right; line-height:14px; block-size:62px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%;padding: 0px; margin: 0px; width: 100%;">
+			<div style="height:40px; padding:0px; margin:0px; width: 100%;"><iframe
+					src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no"
+					width="100%" height="36px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0"
+					style="border:0;margin:0;padding:0;"></iframe></div>
+			<div
+				style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; display:none; font-family: Verdana, Tahoma, Arial, sans-serif;">
+				<a href="https://coinlib.io" target="_blank"
+					style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px; display:none;">Cryptocurrency
+					Prices</a>&nbsp;by Coinlib
+			</div>
+		</div>
 			<section
 				class="elementor-section elementor-top-section elementor-element elementor-element-9e9ec5e elementor-section-full_width elementor-section-height-default elementor-section-height-default mas-addons-sticky-no"
 				data-id="9e9ec5e" data-element_type="section" data-settings="{"
@@ -1607,7 +1031,7 @@
 																	</div>
 																	<div class="zuzu-t-infinite-slider-author-data">
 																		<h6>Leslie Alexander</h6>
-																		<span>Head of finance @ company</span>
+																		<span>Head of finance</span>
 																	</div>
 																</div>
 															</div>
@@ -1629,7 +1053,7 @@
 																	</div>
 																	<div class="zuzu-t-infinite-slider-author-data">
 																		<h6>Marcel Gafam</h6>
-																		<span>Lead accountant @ XYZ.com</span>
+																		<span>Lead accountant</span>
 																	</div>
 																</div>
 															</div>
@@ -1651,7 +1075,7 @@
 																	</div>
 																	<div class="zuzu-t-infinite-slider-author-data">
 																		<h6>Albert Flores</h6>
-																		<span>Investor @ company </span>
+																		<span>Investor </span>
 																	</div>
 																</div>
 															</div>
@@ -1673,7 +1097,7 @@
 																	</div>
 																	<div class="zuzu-t-infinite-slider-author-data">
 																		<h6>Jenny Wilson</h6>
-																		<span>Lead accountant @ XYZ.com</span>
+																		<span>Lead accountant</span>
 																	</div>
 																</div>
 															</div>
@@ -1695,7 +1119,7 @@
 																	</div>
 																	<div class="zuzu-t-infinite-slider-author-data">
 																		<h6>Karen Lynn</h6>
-																		<span>Founder @ Company</span>
+																		<span>Founder</span>
 																	</div>
 																</div>
 															</div>
@@ -2228,6 +1652,7 @@
 	<script src="{% static 'js/webpack.runtime.min.js' %}" id="elementor-webpack-runtime-js"></script>
 	<script src="{% static 'js/frontend-modules.min.js' %}" id="elementor-frontend-modules-js"></script>
 	<script src="{% static 'js/waypoints.min.js' %}" id="elementor-waypoints-js"></script>
+	<script src="https://www.cryptohopper.com/widgets/js/script"></script>
 	<script id="elementor-frontend-js-before">
 		var elementorFrontendConfig = { "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": { "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } } }, "version": "3.13.4", "is_static": false, "experimentalFeatures": { "e_dom_optimization": true, "e_optimized_assets_loading": true, "e_optimized_css_loading": true, "a11y_improvements": true, "additional_custom_breakpoints": true, "landing-pages": true }, "urls": { "assets": "https:\/\/mthemeus.com\/demos\/wp\/zuzu\/wp-content\/plugins\/elementor\/assets\/" }, "swiperClass": "swiper-container", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 9, "title": "Zuzu%20%E2%80%93%20Zuzu%20WordPress%20Theme", "excerpt": "", "featuredImage": false } };
 	</script>
@@ -2361,4 +1786,4 @@
 
 </body>
 
-</html>
+{% endblock content %}

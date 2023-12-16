@@ -35,7 +35,8 @@ def custom_error_page1(request):
 def index(request):
     plans = Plan.objects.all()
     context = {
-        "plan": plans
+        "plan": plans,
+        'user': request.user,
     }
     return render(request, "core/index.html",context)
 
