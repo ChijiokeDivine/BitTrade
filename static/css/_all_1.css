@@ -401,7 +401,7 @@
     padding: 0;
     width: 20px;
     height: 20px;
-    background: url() no-repeat;
+    background: url(../) no-repeat;
     border: none;
     cursor: pointer;
 }

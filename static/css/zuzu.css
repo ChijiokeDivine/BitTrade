@@ -1,0 +1,520 @@
+/*--------------------------------------------------------------============================================================
+[Main Stylesheet]
+
+Project: Zuzu
+/*==============================
+[Table of contents]
+
+ZUZU STYLESHEET
+----------------------------------
+INFINITE TEXT SLIDER 
+
+=============================================================--------------------------------------------------------------*/
+/* INFINITE TEXT SLIDER */
+.zuzu-text-slider-data {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.zuzu-text-slider-data h3 {
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+}
+
+.zuzu-text-slider-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+}
+
+.zuzu-text-slider-icon i,
+.zuzu-text-slider-icon path {
+  transition: all 0.4s;
+  font-size: 30px;
+}
+
+/* card */
+.zuzu-card-wrap {
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.4s;
+  position: relative;
+  background: #201C2C;
+}
+
+
+
+
+.zuzu-card-thumb {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.zuzu-portfolio-image {
+  overflow: hidden;
+}
+
+.zuzu-card-thumb img,
+.zuzu-portfolio-image img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: all 0.4s;
+}
+
+.zuzu-card-wrap:hover .zuzu-card-thumb img,
+.zuzu-portfolio-item:hover .zuzu-portfolio-image img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.zuzu-card-data,
+.zuzu-portfolio-content {
+  margin-top: 20px;
+}
+
+.zuzu-card-data h3,
+.zuzu-portfolio-content h3 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin: 0 0 5px;
+  text-align: left;
+  font-family: Inter, sans-serif;
+}
+
+.zuzu-card-data p,
+.pf-pre-sale {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  opacity: 0.4;
+  margin: 0;
+}
+
+.zuzu-card-footer,
+.portfolio-content-bottom {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.zuzu-card-footer-data h4 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.zuzu-card-btn,
+.portfolio-btn {
+  background: #70DFE6;
+  border-radius: 10px;
+  display: inline-block;
+  padding: 10px 24.4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #13111A;
+  z-index: 0;
+  transition: all 0.4s;
+  position: relative;
+}
+
+.zuzu-card-wrap:hover .zuzu-card-btn {
+  color: #fff;
+}
+
+.zuzu-portfolio-item:hover .portfolio-btn {
+  color: #fff;
+}
+
+
+
+
+/* Zuzu Button css */
+
+.zuzu-btn {
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 10px;
+  padding: 15.5px 36px;
+  font-weight: 700;
+  font-family: Inter, sans-serif;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  min-width: 180px;
+  text-align: center;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  overflow: hidden;
+}
+
+.zuzu-btn.bg-gray {
+  color: #fff;
+  background-color: #26242C;
+} 
+
+.zuzu-btn.active:before {
+  opacity: 1;
+}
+
+.zuzu-btn:before {
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all .4s;
+  opacity: 0;
+  background: linear-gradient(225deg, #30FFC7 0%, #512FE7 100%)
+}
+
+.zuzu-btn:hover:before {
+  opacity: 1;
+}
+
+.zuzu-btn.active:hover:before {
+  width: 200%;
+}
+
+.zuzu-outline-btn {
+  padding: 2px;
+  border-radius: 10px;
+  display: inline-block;
+  color: #fff !important;
+  background: linear-gradient(225deg, #30FFC7 0%, #512FE7 100%)
+}
+
+.zuzu-outline-btn span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 15.5px 38px;
+  border-radius: 10px;
+  background-color: #13111A;
+  transition: all .4s;
+}
+
+.zuzu-outline-btn:hover span {
+  background-color: transparent;
+}
+
+/*test slider*/
+.zuzu-text-slider-section {
+  padding: 22px 0;
+  overflow: hidden;
+  background: linear-gradient(225deg, #0080ff 0, #7d41ea 46.35%, #ff00d4 100%);
+}
+
+.zuzu-text-slider-data {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  flex-direction: row-reverse;
+}
+
+.zuzu-text-slider-data h3 {
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 2px;
+  display: inline-block;
+  margin: 0 15px;
+  color: #fff;
+  line-height: 36px;
+}
+
+@media (max-width: 600px) {
+  .zuzu-text-slider-data {
+    text-align: center;
+    display: block !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .zuzu-text-slider-icon {
+    margin-bottom: 10px;
+  }
+}
+
+
+/*zuzu nft slider v2*/
+
+
+.zuzu-nft-slider .slick-slide {
+  margin: 0 12px;
+}
+
+
+/* elementor extra css hero thumb new css add */
+.zuzu-hero-thumb {
+  transform: rotate(3deg);
+  padding-left: 150px;
+}
+
+@media (max-width: 1399px) {
+  .zuzu-hero-thumb {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .zuzu-hero-thumb {
+    padding-left: 0px;
+    transform: rotate(0deg);
+  }
+
+}
+
+.zuzu-footer-address li.elementor-icon-list-item {
+  display: flex;
+}
+
+
+/*fugo v2 counter section*/
+.fugo-counter-section .elementor-counter {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  display: flex;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+
+
+@media (max-width: 1207px) {
+  .fugo-counter-section .elementor-counter {
+    width: 210px;
+    height: 210px;
+    padding: 20px;
+  }
+
+}
+
+
+
+/*service details iconbox*/
+
+.zuzu-iconbox-border {
+  position: relative;
+}
+
+.zuzu-iconbox-border:before {
+  content: "";
+  top: 45px;
+  left: 50%;
+  width: calc(100% - 30%);
+  height: 1px;
+  position: absolute;
+  transform: translateX(-50%);
+  border: 1px dashed rgba(19, 17, 26, .1);
+}
+
+@media (max-width: 1023px) {
+  .zuzu-iconbox-border:before {
+    width: calc(100% - 50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .zuzu-iconbox-border:before {
+    content: none;
+  }
+}
+
+
+/*portfolio*/
+a.zuzu-portfolio-item.style-two {
+  position: relative;
+}
+
+
+a.zuzu-portfolio-item.style-two:before {
+  content: "";
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 0;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  mix-blend-mode: multiply;
+  border-radius: 10px;
+  transition: all .4s;
+  background: linear-gradient(180deg, rgba(19, 17, 26, 0) 0, #13111a 100%);
+}
+
+a.zuzu-portfolio-item.style-two:hover:before {
+  opacity: 1;
+}
+
+a.zuzu-portfolio-item.style-two:hover .zuzu-portfolio-content.content-postion-on-image {
+  left: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.zuzu-portfolio-content.content-postion-on-image {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  z-index: 1;
+  opacity: 0;
+  border-radius: 10px;
+  visibility: hidden;
+  transition: all .4s;
+}
+
+.style-two .zuzu-portfolio-image {
+    border-radius: 10px;
+}
+
+.style-two + .zuzu-portfolio-content.content-postion-on-image{
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+
+.style-two + .portfolio-content-bottom{
+  display: block;
+  margin-top: 20px;
+}
+
+/*testimonial page*/
+.style-two .testi-meta {
+  display: flex;
+  align-items: center;
+}
+
+.style-two .testi-image {
+  flex-shrink: 0;
+}
+
+/*coming soon*/
+.coming-soong-page .mas-addons-countdown li {
+  width: 200px;
+  height: 200px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media (max-width: 1023px) {
+  .coming-soong-page .mas-addons-countdown li {
+    width: 170px;
+    height: 170px;
+  }
+
+}
+
+.coming-soong-page .mas-addons-countdown li:nth-child(2),
+.coming-soong-page .mas-addons-countdown li:nth-child(3),
+.coming-soong-page .mas-addons-countdown li:nth-child(4) {
+  margin-left: -30px;
+}
+
+@media (max-width: 767px) {
+  .coming-soong-page .mas-addons-countdown {
+    justify-content: center;
+  }
+
+  .coming-soong-page .mas-addons-countdown li:nth-child(2),
+  .coming-soong-page .mas-addons-countdown li:nth-child(3),
+  .coming-soong-page .mas-addons-countdown li:nth-child(4) {
+    margin-left: 0;
+  }
+
+}
+
+
+/*testimonial infinite slider*/
+
+.zuzu-t-infinite-slider-author-wrap {
+    display: flex;
+    align-items: center;
+}
+.zuzu-t-infinite-slider-author{
+  flex-shrink: 0;
+}
+.zuzu-t-infinite-slider-author img{
+  object-fit: cover;
+  margin-right: 15px;
+  object-position: center top;
+}
+
+.zuzu-testimonial-infinite-slider .slick-slide {
+  margin: 0 12px;
+}
+
+.zuzu-testimonial-infinite-slider .slick-dots {
+    position: static;
+}
+
+
+/*card slider arrows*/
+.card-slider-arrow .slick-prev, 
+.card-slider-arrow .slick-next {
+    left: -75px;
+    top: 50%;
+    z-index: 9;
+    position: absolute;
+    transform: translateY(-50%);
+}
+@media (max-width: 767px) {
+  .card-slider-arrow .slick-prev, 
+  .card-slider-arrow .slick-next{
+    display: none;
+  }
+}
+
+.card-slider-arrow button {
+    width: 60px;
+    height: 60px;
+    color: #201C2C;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-size: 10px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    border: 5px solid #13111A;
+    transition: all 0.4s;
+}
+
+.card-slider-arrow .slick-next {
+    left: auto;
+    right: -75px;
+}
+
+.card-slider-arrow .slick-prev:before, 
+.card-slider-arrow .slick-next:before{
+  content: none;
+}

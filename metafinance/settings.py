@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-0tgu5vhts8_)lhzrzazlq)sv0=dcmdq^z7-!sz8c-(o4!a4xu3"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True 
 
 ALLOWED_HOSTS = ['*']
 
@@ -103,8 +103,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'PASSWORD': 'mto9hyCHRZRVGdAR',
-        'HOST': 'db.fqjvatobreqdzaelsgxt.supabase.co',
+        'PASSWORD': 'Bumage101@gmail',
+        'HOST': 'db.qgvkjfhhakoiglviijsu.supabase.co',
         'PORT': '5432',
     }
 }
@@ -161,7 +161,6 @@ else:
 
   STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-  
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 

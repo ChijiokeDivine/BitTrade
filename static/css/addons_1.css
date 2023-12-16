@@ -1,0 +1,3753 @@
+0
+/*--------------------------------------------------------------============================================================
+[Widget Stylesheet]
+
+/*==============================
+[Table of contents]
+
+WIDGET STYLESHEET
+----------------------------------
+BREADCRUMB
+MAIN MENU
+BUTTON
+FEATURE BOX
+PRICING BOX
+LINEICON BOX
+TEAM CARD
+JQUERY FATEPICKER
+ALIGN SERVICE
+HEADDING
+BLOG
+BLOG CATEGORY
+NAGIGATION
+BACK TO SCROLL
+PORTFOLIO
+blog
+VERTICAL MENU
+SLIDER
+STICKY
+COUNTDOWN
+CONTACT FORM
+LOGIN FORM
+ACCORDION
+PROGRESS BAR
+TAB
+CARD
+CSS TRANSFORM
+VIDEO BUTTON
+CONTENT SWITCHER
+LIST GROUP
+
+......
+RESPONSIVE CSS
+=============================================================--------------------------------------------------------------*/
+
+/*---------------------------------------------------
+ELEMENTOR CUSOTM CSS
+----------------------------------------------------*/
+
+.elementor-wrapper.elementor-open-lightbox {
+    position: relative;
+}
+
+.elementor-wrapper.elementor-open-lightbox:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    content: "";
+    border-radius: 10px;
+    z-index: 1;
+    opacity: 0.2;
+}
+
+.elementor-custom-embed-play {
+    z-index: 2;
+}
+
+.elementor-widget-text-editor .elementor-drop-cap {
+    line-height: 0;
+}
+
+/* Video Butoon Animation  */
+.elementor-open-lightbox {
+    z-index: 99;
+}
+
+.elementor-custom-embed-play:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.elementor-icon {
+    display: inline-flex !important;
+}
+
+/*---------------------------------------------------
+    BREADCRUMB
+    ----------------------------------------------------*/
+
+ul.mas-addons-breadcrumbs {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.mas-addons-breadcrumbs li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+ul.mas-addons-breadcrumbs li:last-child {
+    margin: 0;
+}
+
+ul.mas-addons-breadcrumbs li a,
+ul.mas-addons-breadcrumbs li span.mas-addons-breadcrumbs-text,
+ul.mas-addons-breadcrumbs li span.mas-addons-breadcrumbs-separator-icon {
+    display: block;
+}
+
+ul.mas-addons-breadcrumbs li span.mas-addons-breadcrumbs-text {
+    -webkit-transition: all .4s;
+    transition: all .4s;
+}
+
+span.mas-addons-breadcrumbs-home-icon {
+    margin-right: 10px;
+}
+
+/*---------------------------------------------------
+MAIN MENU
+----------------------------------------------------*/
+
+.mas-addons-main-menu-wrap.menu-align-end {
+    justify-content: flex-end;
+}
+
+.mas-addons-main-menu-wrap.menu-align-center {
+    justify-content: center;
+}
+
+.mas-addons-main-menu-wrap.menu-align-start {
+    justify-content: flex-start;
+}
+
+/*---------------------------------------------------
+    BUTTON
+    ----------------------------------------------------*/
+a.mas-addons-btn,
+.mas-addons-btn {
+    background: var(--accent-color);
+    line-height: 25px;
+    font-size: 17px;
+    padding-bottom: 5px;
+    position: relative;
+    display: inline-flex;
+    cursor: pointer;
+    overflow: hidden;
+    justify-content: center;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+a.mas-addons-btn.btn-type-boxed {
+    background-color: var(--accent-color);
+    color: #fff;
+    letter-spacing: -0.53px;
+    font-weight: 500;
+    line-height: 24px;
+    padding: 20px 40px 15px;
+    border-radius: 0px;
+    display: inline-flex;
+    border-color: transparent;
+    align-items: center;
+}
+
+.elementor-image-box-img {
+    transition: .4s;
+}
+
+
+.elementor-widget-mas-addons-form .mas-addons-contact-from button[type=submit],
+.mas-addons-btn {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.elementor-widget-mas-addons-form .mas-addons-contact-from button[type=submit]:hover:after,
+.mas-addons-btn:hover:after {
+    visibility: visible;
+    opacity: 0;
+    height: 474%;
+    left: -90px;
+    top: -83px;
+}
+
+.btn-icon svg * {
+    transition: .3s;
+}
+
+.newsletter-form button.form-btn i {
+    margin-left: 0;
+}
+
+.wpcf7-form-control.wpcf7-acceptance span {
+    display: inline;
+}
+
+
+/* Button Style */
+
+.mas-addons-btn.style-one {
+    display: inline-block;
+    overflow: hidden;
+    transition: all 0.2s linear 0s;
+}
+
+.mas-addons-btn span {
+    transition: all 0s ease !important;
+}
+
+.mas-addons-btn.style-one:before {
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 2px;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transform: translateX(100%);
+    transition: all 0.2s linear 0s;
+}
+
+.mas-addons-btn.style-one:hover {
+    text-indent: -20px;
+}
+
+.mas-addons-btn.style-one:hover:before {
+    opacity: 1;
+    text-indent: 0px;
+    transform: translateX(-25%);
+}
+
+/* Button Style two*/
+
+
+
+
+.mas-addons-btn span {
+    position: relative;
+}
+
+.mas-addons-btn.style-two::before {
+    position: absolute;
+    content: "";
+    transition: 0.3s ease-out;
+}
+
+.mas-addons-btn.style-two::before {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mas-addons-btn.style-two:hover::before {
+    width: 0%;
+}
+
+
+
+/*Youtube Button Style Three*/
+
+.mas-addons-btn.style-three:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: pulse-border 1500ms ease-out infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/*Button Style Four*/
+
+.mas-addons-btn.style-four::before {
+    position: absolute;
+    content: "";
+    transition: 0.3s ease-out;
+}
+
+.mas-addons-btn.style-four::before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+}
+
+.mas-addons-btn.style-four:hover::before {
+    width: 100%;
+}
+
+
+
+
+/*---------------------------------------------------
+FEATURE BOX
+----------------------------------------------------*/
+
+.mas-addons-feature-box-item {
+    transition: .4s;
+}
+
+.mas-addons-feature-box-item .icon-background-yes .mas-addons-feature-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    background-color: var(--accent-color);
+    border-radius: 0px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-addons-feature-box-item .icon-background-yes .mas-addons-feature-icon svg {
+    width: 35px;
+}
+
+span.mas-addons-feature-icon.icon-type-image img {
+    object-fit: cover;
+}
+
+.mas-addons-feature-icon-wrap {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-addons-feature-title {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+.mas-addons-feature-content p {
+    margin-bottom: 0;
+}
+
+.mas-addons-feature-box-item.mas-addons-icon-position-left {
+    display: inline-flex;
+    text-align: left;
+}
+
+.mas-addons-feature-box-item.mas-addons-icon-position-right {
+    display: flex;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.mas-addons-feature-box-item.mas-addons-feature-icon-center {
+    text-align: center;
+}
+
+.mas-addons-feature-box-item.mas-addons-feature-icon-left {
+    text-align: left;
+}
+
+.mas-addons-feature-box-item.mas-addons-feature-icon-left .mas-addons-feature-icon-wrap {
+    justify-content: flex-start;
+}
+
+.mas-addons-feature-box-item.mas-addons-feature-icon-right .mas-addons-feature-icon-wrap {
+    justify-content: flex-end;
+}
+
+.mas-addons-feature-box-item.mas-addons-feature-icon-right {
+    text-align: right;
+}
+
+.mas-addons-feature-icon-wrap i,
+.mas-addons-feature-icon-wrap svg,
+.mas-addons-feature-icon {
+    transition: .3s ease-in-out;
+    ;
+}
+
+.mas-addons-feature-box-item .icon-background-no .mas-addons-feature-icon svg {
+    MAX-HEIGHT: 118PX;
+}
+
+.mas-addons-feature-box-item .mas-addons-feature-icon i {
+    font-size: 25px;
+}
+
+.mas-addons-feature-box-number {
+    font-size: 22px;
+    letter-spacing: -0.73px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.mas-addons-feature-box-number span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .16);
+}
+
+/*---------------------------------------------------
+PRICING BOX
+----------------------------------------------------*/
+
+/* Pricing Menu Start */
+a.mas-addons-pricing-table-action span {
+    transition: none;
+}
+
+.mas-addons-pricing-list-wrapper.border_bottom .mas-addons-pricing-list-item:last-child {
+    border-bottom: none !important;
+}
+
+.mas-addons-pricing-list-item.yes {
+    display: flex;
+}
+
+.mas-addons-pricing-list-item-thumbnail {
+    overflow: hidden;
+}
+
+.mas-addons-pricing-list-item-thumbnail img {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.mas-addons-pricing-title {
+    display: flex;
+    align-items: center;
+}
+
+.mas-addons-pricing-title .mas-addons-pricing-list-item-price {
+    margin-left: auto;
+}
+
+.mas-addons-pricing-list-item-content-title {
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.mas-addons-pricing-list-item-content-description {
+    margin: 0;
+}
+
+.mas-addons-pricing-list-item-price span {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.mas-addons-pricing-list-item-content-action {
+    display: inline-block;
+    transition: all .3s ease;
+}
+
+.mas-addons-pricing-list-item-content-conntector {
+    border-bottom: 1px dashed;
+    height: 1px;
+    flex-grow: 1;
+    align-self: center;
+    margin: 0 15px;
+}
+
+/* Pricing List End */
+
+/* Pricing Table Start */
+
+.left {
+    text-align: left;
+}
+
+.left .mas-addons-pricing-table-features li {
+    justify-content: flex-start;
+}
+
+.left .price-box {
+    margin-right: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+.center.mas-addons-pricing-table-features li {
+    justify-content: center;
+}
+
+.center .price-box {
+    margin: 0 auto;
+}
+
+.right {
+    text-align: right;
+}
+
+.right .mas-addons-pricing-table-features li {
+    justify-content: flex-end;
+}
+
+.right .price-box {
+    margin-left: auto;
+}
+
+.mas-addons-pricing-table-header {
+    position: relative;
+    z-index: -1;
+}
+
+.mas-addons-pricing-table-header .mas-addons-pricing-table-header-curved svg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.mas-addons-pricing-table-title {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.mas-addons-pricing-table-subtitle {
+    margin: 0 0 10px 0;
+}
+
+.price-box {
+    position: relative;
+}
+
+.mas-addons-pricing-table-price {
+    position: relative;
+}
+
+.mas-addons-pricing-table-price.mas-addons-discount-price-yes {
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.mas-addons-pricing-table-price.mas-addons-discount-price-yes .mas-addons-pricing-table-regular-price {
+    text-decoration: line-through;
+    font-size: 20px;
+    color: #e5e5e5;
+    line-height: 2.1em;
+}
+
+.mas-addons-pricing-table-price svg {
+    position: absolute;
+}
+
+.mas-addons-pricing-table-wrapper .mas-addons-pricing-table-price p.mas-addons-pricing-table-new-price {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -3.2px;
+}
+
+.mas-addons-pricing-table-wrapper .mas-addons-pricing-table-price span.mas-addons-price-period {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.mas-addons-pricing-table-price p {
+    margin: 0;
+}
+
+.price-box p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    width: 100%;
+}
+
+.mas-addons-pricing-table-features {
+    margin: 0;
+    padding: 0;
+}
+
+.mas-addons-pricing-table-features li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0px;
+}
+
+.list-border-bottom li:not(:last-child) {
+    border-bottom: 1px solid #ff5985;
+}
+
+.mas-addons-pricing-table-features li .mas-addons-pricing-li-icon {
+    margin-right: 7px;
+}
+
+.mas-addons-pricing-table-action {
+    text-decoration: none;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-addons-pricing-table-badge-wrapper {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s ease;
+}
+
+.mas-addons-pricing-table-wrapper {
+    transition: all .3s ease;
+}
+
+.mas-addons-pricing-table-wrapper.transition_top {
+    transition: all .3s ease;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+
+.mas-addons-pricing-table-wrapper.transition_top:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+}
+
+.mas-addons-pricing-table-wrapper.transition_bottom {
+    transition: all .3s ease;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+
+.mas-addons-pricing-table-wrapper.transition_bottom:hover {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+}
+
+.mas-addons-pricing-table-wrapper.transition_zoom {
+    transition: all .3s ease;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+}
+
+.mas-addons-pricing-table-wrapper.transition_zoom:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+}
+
+.mas-addons-pricing-table-wrapper .text-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #13c83a;
+    padding: 13px 50px;
+    width: 160px;
+    text-align: center;
+    -webkit-transform: rotate(45deg) translate(40px, -22px);
+    transform: rotate(45deg) translate(40px, -22px);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.mas-addons-pricing-table-wrapper .icon-badge {
+    position: absolute;
+    padding: 15px 10px;
+    border-radius: 0 0 40px 40px;
+    background: #13c83a;
+    right: 30px;
+    top: 0;
+    z-index: 2;
+}
+
+.mas-addons-pricing-table-promo-label {
+    display: block;
+}
+
+.mas-addons-pricing-table-currency {
+    position: relative;
+}
+
+.mas-addons-pricing-table-price-subtitle {
+    display: block;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a.mas-addons-btn.yearly-btn {
+    display: none;
+}
+
+[data-value-active="yearly"] a.mas-addons-btn.yearly-btn {
+    display: inline-flex;
+}
+
+[data-value-active="yearly"] a.mas-addons-btn.monthly-btn {
+    display: none;
+}
+
+/*---------------------------------------------------
+Pricing Table
+----------------------------------------------------*/
+
+.mas-addons-pricing-area .mas-addons-pricing-item {
+    border: 1px solid #e7e9ed;
+    color: var(--text-color);
+    padding: 35px 50px 35px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-title {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.63px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+div#pricing-dynamic-deck--head {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-features {
+    margin-bottom: 30px;
+    color: var(--text-color);
+    /* Style for "6 Month Pr" */
+    /* opacity: 0.7; */
+    font-size: 17px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+    line-height: 29px;
+}
+
+.mas-addons-pricing-features img {
+    margin-right: 10px;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-features p {
+    margin-bottom: 15px;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-item .mas-addons-price h2 {
+    font-size: 60px;
+    color: var(--heading-color);
+    font-weight: 700;
+    letter-spacing: -2px;
+    display: inline-block;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-item .mas-addons-price {
+    font-weight: 400;
+}
+
+.mas-addons-pricing-area .mas-addons-price.mas-addons-price-yearly {
+    display: none;
+}
+
+/* .mas-addons-pricing-area .mas-addons-pricing-item.focused a.mas-addons-btn.btn-type-boxed,.mas-addons-pricing-item.pricing-box-not-loop .mas-addons-btn.btn-type-boxed {
+    background-color: var(--accent-color);
+    color: #fff;
+    border-color: var(--accent-color);
+} */
+
+.mas-addons-pricing-item span.price-currency {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+}
+
+.mas-addons-pricing-item a.mas-addons-btn.btn-type-boxed {
+    background-color: rgb(71 59 240 / 0.08);
+    /* Style for "Start Free" */
+    color: var(--accent-color);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.6px;
+    padding: 19.5px 20px;
+    line-height: 1;
+    border-radius: 8px;
+}
+
+.mas-addons-pricing-item a.mas-addons-btn.btn-type-boxed i {
+    margin-left: 40px;
+}
+
+.mas-addons-pricing-item a.mas-addons-btn.btn-type-boxed:hover {
+    -webkit-transform: translatey(-8px);
+    transform: translatey(-8px);
+}
+
+/* .mas-addons-pricing-item.focused a.mas-addons-btn.btn-type-boxed {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+} */
+
+/* pricing switcher  */
+
+.mas-addons-pricing-item.focused {
+    z-index: 1;
+}
+
+.mas-addons-price-wrap span.price-subtitle.dynamic-value {
+    /* Style for "billed mon" */
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -0.1px;
+    line-height: 26px;
+    display: block;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-tabs {
+    color: var(--heading-color);
+    font-size: 19px;
+    letter-spacing: -0.2px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 55px;
+}
+
+span.mas-addons-price-offer {
+    font-size: 13px;
+    color: var(--accent-color);
+    font-weight: 700;
+    letter-spacing: 1.63px;
+    line-height: inherit;
+    background-color: rgb(71 59 240 / .1);
+    padding: 0.5px 13px;
+    border-radius: 30px;
+    margin-left: 15px;
+    text-transform: uppercase;
+}
+
+#pricing-dynamic-deck--head .btn-toggle.active {
+    background-color: rgb(22 28 45 / .15);
+}
+
+#pricing-dynamic-deck--head .btn-toggle {
+    width: 70px;
+    height: 33px;
+    border-radius: 17px;
+    background-color: var(--accent-color);
+    position: relative;
+    display: inline-block;
+    margin: 0;
+}
+
+#pricing-dynamic-deck--head .btn-toggle.active span {
+    right: calc(100% - 27px);
+}
+
+#pricing-dynamic-deck--head .btn-toggle span {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 7px;
+    margin-left: 6px;
+    top: 50%;
+    -webkit-transform: translatey(-50%);
+    transform: translatey(-50%);
+    -webkit-transition: .4s ease-in-out;
+    transition: .4s ease-in-out;
+    border-radius: 500px;
+    pointer-events: none;
+}
+
+.mas-addons-pricing-duration {
+    color: var(--heading-color);
+    font-size: 17px;
+    letter-spacing: -0.09px;
+    line-height: 29px;
+}
+
+.mas-addons-pricing-item .mas-addons-btn-wrapper {
+    margin-bottom: 12px;
+}
+
+.mas-addons-pricing-area .mas-addons-pricing-features strong {
+    color: #161c2d;
+}
+
+/* pricing-switcher-tab */
+
+.mas-addons-pricing-tabs.style-2 .mas-addons-pricing-tab {
+    /* Style for "Rectangle" */
+    border-radius: 22px;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.mas-addons-pricing-tabs.style-2 .mas-addons-pricing-tab a {
+    /* Style for "Yearly" */
+    color: #666666;
+    font-family: Karla;
+    font-size: 13px;
+    border-radius: 17px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 9px 27px;
+    margin: 4px;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.mas-addons-pricing-tabs.style-2 .mas-addons-pricing-tab a.active {
+    background-color: var(--accent-color);
+    color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.mas-addons-pricing-tabs.style-2 {
+    position: relative;
+}
+
+/* Pricing dynamic css */
+
+[data-pricing-dynamic][data-value-active="yearly"] .dynamic-value:after {
+    display: inline-block;
+    content: attr(data-yearly);
+}
+
+[data-pricing-dynamic][data-value-active="monthly"] .dynamic-value:after {
+    display: inline;
+    content: attr(data-monthly);
+}
+
+.dynamic-value:after {
+    display: inline-block;
+    content: attr(data-active);
+}
+
+.static-value:before {
+    display: inline-block;
+    content: attr(data-active);
+}
+
+
+/* Pricing Badge */
+.mas-addons-price-wrap {
+    position: relative;
+}
+
+.mas-addons-pricing-badge.style-two {
+    background-color: #2B59FF;
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.mas-addons-pricing-badge.style-two:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 80px;
+    border-bottom: 80px solid blue;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+}
+
+
+
+/*---------------------------------------------------
+LINEICON BOX
+----------------------------------------------------*/
+
+.mas-addons-feature-box-item {
+    width: auto;
+}
+
+.mas-addons-feature-box-item .mas-addons-feature-title {
+    display: inline-block;
+}
+
+.mas-addons-inline-icon-item {
+    display: flex;
+}
+
+.mas-addons-inline-icon-box-wrap .mas-addons-inline-icon-box-icon {
+    width: 57px;
+    height: 57px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-addons-inline-icon-box-wrap {
+    margin-right: 20px;
+    margin-top: 4px;
+}
+
+h4.mas-addons-inline-icon-box-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+span.mas-addons-inline-icon-box-icon,
+span.mas-addons-inline-icon-box-icon svg,
+span.mas-addons-inline-icon-box-icon i {
+    transition: .3s ease-in-out;
+}
+
+.mas-addons-inline-icon-box-content p {
+    margin-bottom: 0;
+}
+
+/*---------------------------------------------------
+TEAM CARD
+----------------------------------------------------*/
+
+.mas-addons-team-item .member-image img {
+    object-fit: cover;
+    width: 100%;
+    height: 333px;
+    border-radius: 6px;
+}
+
+.mas-addons-team-item .member-name {
+    font-size: 21px;
+    letter-spacing: -0.5px;
+    margin-bottom: 7px;
+    color: var(--heading-color);
+}
+
+.mas-addons-team-item span.team-position {
+    color: var(--text-color);
+    letter-spacing: -0.2px;
+}
+
+.team-apply-card {
+    height: 333px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 25px;
+}
+
+.team-apply-card h4 {
+    font-size: 24px;
+    line-height: 1.4em;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.team-apply-card a {
+    font-size: 21px;
+    letter-spacing: -1.2px;
+    color: var(--accent-color);
+    border-style: solid;
+    border-width: 0px 0px 0px 0px;
+    font-weight: 700;
+}
+
+.team-apply-card a i {
+    margin-left: 15px;
+}
+
+.mas-addons-team-item {
+    margin-bottom: 61px;
+}
+
+.mas-addons-team-item {
+    display: block;
+}
+
+.team-style-2 a.mas-addons-team-item {
+    display: flex;
+}
+
+/*---------------------------------------------------
+    CSS TRANSFORM
+    ----------------------------------------------------*/
+
+.fsd-css-transform-yes {
+    -webkit-transition-duration: var(--fsd-tfx-transition-duration, 0.2s);
+    transition-duration: var(--fsd-tfx-transition-duration, 0.2s);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transform: translate(var(--fsd-tfx-translate-x, 0), var(--fsd-tfx-translate-y, 0)) scale(var(--fsd-tfx-scale-x, 1), var(--fsd-tfx-scale-y, 1)) skew(var(--fsd-tfx-skew-x, 0), var(--fsd-tfx-skew-y, 0)) rotateX(var(--fsd-tfx-rotate-x, 0)) rotateY(var(--fsd-tfx-rotate-y, 0)) rotateZ(var(--fsd-tfx-rotate-z, 0));
+    transform: translate(var(--fsd-tfx-translate-x, 0), var(--fsd-tfx-translate-y, 0)) scale(var(--fsd-tfx-scale-x, 1), var(--fsd-tfx-scale-y, 1)) skew(var(--fsd-tfx-skew-x, 0), var(--fsd-tfx-skew-y, 0)) rotateX(var(--fsd-tfx-rotate-x, 0)) rotateY(var(--fsd-tfx-rotate-y, 0)) rotateZ(var(--fsd-tfx-rotate-z, 0));
+}
+
+.fsd-css-transform-yes:hover {
+    -webkit-transform: translate(var(--fsd-tfx-translate-x-hover, var(--fsd-tfx-translate-x, 0)), var(--fsd-tfx-translate-y-hover, var(--fsd-tfx-translate-y, 0))) scale(var(--fsd-tfx-scale-x-hover, var(--fsd-tfx-scale-x, 1)), var(--fsd-tfx-scale-y-hover, var(--fsd-tfx-scale-y, 1))) skew(var(--fsd-tfx-skew-x-hover, var(--fsd-tfx-skew-x, 0)), var(--fsd-tfx-skew-y-hover, var(--fsd-tfx-skew-y, 0))) rotateX(var(--fsd-tfx-rotate-x-hover, var(--fsd-tfx-rotate-x, 0))) rotateY(var(--fsd-tfx-rotate-y-hover, var(--fsd-tfx-rotate-y, 0))) rotateZ(var(--fsd-tfx-rotate-z-hover, var(--fsd-tfx-rotate-z, 0)));
+    transform: translate(var(--fsd-tfx-translate-x-hover, var(--fsd-tfx-translate-x, 0)), var(--fsd-tfx-translate-y-hover, var(--fsd-tfx-translate-y, 0))) scale(var(--fsd-tfx-scale-x-hover, var(--fsd-tfx-scale-x, 1)), var(--fsd-tfx-scale-y-hover, var(--fsd-tfx-scale-y, 1))) skew(var(--fsd-tfx-skew-x-hover, var(--fsd-tfx-skew-x, 0)), var(--fsd-tfx-skew-y-hover, var(--fsd-tfx-skew-y, 0))) rotateX(var(--fsd-tfx-rotate-x-hover, var(--fsd-tfx-rotate-x, 0))) rotateY(var(--fsd-tfx-rotate-y-hover, var(--fsd-tfx-rotate-y, 0))) rotateZ(var(--fsd-tfx-rotate-z-hover, var(--fsd-tfx-rotate-z, 0)));
+}
+
+/*---------------------------------------------------
+    JQUERY FATEPICKER
+    ----------------------------------------------------*/
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev-hover .ui-icon,
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next.ui-datepicker-next-hover .ui-icon {
+    color: var(--accent-color) !important;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-icon {
+    font-size: 14px !important;
+    transition: .4s;
+    top: 50%;
+    transform: translatey(-4px);
+}
+
+div#ui-datepicker-div {
+    border: blanchedalmond;
+    width: 239px;
+    border-radius: 0px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.ui-datepicker-header.ui-widget-header {
+    background-color: #EFF0F4 !important;
+    border-bottom: none !important;
+}
+
+td.ui-datepicker-days-cell-over.ui-datepicker-today,
+td.ui-datepicker-days-cell-over.ui-datepicker-today a {
+    background-color: #EFF0F4 !important;
+}
+
+td.ui-datepicker-days-cell-over.ui-datepicker-today a.ui-state-highlight {
+    border: none;
+}
+
+td a.ui-state-default {
+    font-size: 11px;
+}
+
+a.ui-state-default.ui-state-hover {
+    background-color: transparent !important;
+}
+
+.ui-datepicker-calendar tbody td:hover {
+    background: #EFF0F4;
+}
+
+.ui-datepicker th {
+    font-size: 12px;
+}
+
+.ui-datepicker .ui-datepicker-title {
+    font-size: 12px;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-icon:before {
+    margin-bottom: 6px;
+    display: block;
+}
+
+.ui-datepicker table {
+    margin-bottom: 0 !important;
+    border-top: none !important;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    border-radius: 0px !important;
+    overflow: hidden;
+    border: 0px !important;
+}
+
+table.ui-datepicker-calendar tr:first-child {
+    border-top: none !important;
+}
+
+.ui-widget-content tr {
+    height: 35px !important;
+}
+
+.elementor-counter .elementor-counter-number-prefix,
+.elementor-counter .elementor-counter-number-suffix {
+    flex-grow: unset !important;
+}
+
+.subscribe-form.mas-addons-home-8-subscribe.btn-red button[type=submit] {
+    background-color: #f74d4d;
+}
+
+/*---------------------------------------------------
+SERVICE
+----------------------------------------------------*/
+
+.content-align-right {
+    text-align: right;
+}
+
+.content-align-center {
+    text-align: center;
+}
+
+.content-align-left {
+    text-align: left;
+}
+
+.content-align-justify .mas-addons-btn {
+    width: 100%;
+    ;
+}
+
+.mas-addons-service-widget-item .service-thumbnail span.image-shape {
+    width: 51px;
+    height: 50px;
+    background-color: #fee444;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    z-index: -1;
+}
+
+.mas-addons-service-widget-item .service-thumbnail img {
+    z-index: 1;
+    position: relative;
+}
+
+.mas-addons-service-widget-item .service-thumbnail {
+    position: relative;
+    z-index: 1;
+}
+
+.mas-addons-service-widget-item .service-thumbnail-wrapper *,
+.mas-addons-service-widget-item .service-content * {
+    transition: .3s;
+}
+
+.mas-addons-service-widget-item {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 100%;
+}
+
+.mas-addons-service-widget-item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    transform: translate(-96%, 2%);
+    border-radius: 50%;
+    transition: .4s linear;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.mas-addons-service-widget-item:hover:after {
+    border-radius: 0;
+    transform: translate(-22%, -19%);
+    visibility: visible;
+    opacity: 1;
+}
+
+.mas-addons-service-widget-item h3.service-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mas-addons-service-widget-item .service-top-title a {
+    display: block;
+}
+
+/*---------------------------------------------------
+HEADDING
+----------------------------------------------------*/
+
+.mas-addons-heading-title.show-line-yes:after {
+    content: "";
+    width: 100%;
+    background-color: #fee444;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 7px;
+    z-index: -1;
+}
+
+.mas-addons-heading-title.show-line-yes {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/*---------------------------------------------------
+DUAL HEADDING
+----------------------------------------------------*/
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper {
+    padding: 5px;
+}
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-description {
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-icon {
+    display: inline-block;
+}
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-icon i {
+    font-size: 36px;
+}
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title {
+    font-size: 30px;
+    color: #132c47;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*    .mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title .first-heading, .mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title .second-heading {
+        padding: 15px 10px;
+    } */
+
+.mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title span {
+    color: #132c47;
+    display: initial;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+
+    .mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title .first-heading,
+    .mas-addons-dual-heading .mas-addons-dual-heading-wrapper .mas-addons-dual-heading-title .second-heading {
+        padding: 0;
+    }
+}
+
+/*---------------------------------------------------
+BLOG
+----------------------------------------------------*/
+
+/* default style  */
+.mas-addons-post-widget-item {
+    transition: 0.4s;
+}
+
+.mas-addons-post-widget-item .post-thumbnail {
+    display: block;
+}
+
+.mas-addons-post-widget-item .post-thumbnail img {
+    object-fit: cover;
+    height: 261px;
+    border-radius: 0;
+    width: 100%;
+}
+
+.post-style-style-three .mas-addons-post-widget-item .post-thumbnail {
+    width: 40%;
+    max-width: 40%;
+    min-height: 300px;
+    height: 100%;
+    position: relative;
+}
+
+.mas-addons-post-widget-item.post-style-style-three .post-thumbnail img {
+    height: 300px;
+}
+
+.post-style-style-three .mas-addons-post-widget-item .post-thumbnail-wrapper {
+    height: 100%;
+}
+
+
+.mas-addons-post-widget-item a.post-link {
+    display: block;
+}
+
+.post-style-style-three .mas-addons-post-widget-item .post-thumb-link {
+    display: inline-block;
+    height: 100%;
+}
+
+.mas-addons-post-widget-item.post-style-style-one .post-content-wrap {
+    padding: 40px 0 40px;
+}
+
+.mas-addons-post-widget-item.post-style-style-one {
+    position: relative;
+}
+
+.mas-addons-post-widget-item.post-style-style-one:after {
+    position: absolute;
+    content: '';
+    background: #FFBE00;
+    height: 5px;
+    width: 0%;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.mas-addons-post-widget-item.post-style-style-one:hover:after {
+    width: 100%;
+}
+
+.post-top-meta {
+    font-size: 13px;
+    line-height: 1.692em;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+}
+
+.mas-addons-post-widget-item.post-style-style-one .category-list {
+    padding-right: 45px;
+}
+
+.mas-addons-post-widget-item.post-style-style-one .post-date {
+    position: relative;
+    color: rgba(2, 12, 23, 0.65);
+}
+
+.mas-addons-post-widget-item.post-style-style-one .post-date:before {
+    position: absolute;
+    content: "\f111";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    top: 0;
+    left: -25px;
+    font-size: 8px;
+    color: rgba(2, 12, 23, 0.4);
+}
+
+h3.post-title {
+    font-size: 21px;
+    line-height: 32px;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.post-meta-bottom a {
+    color: var(--text-color);
+}
+
+.post-meta-bottom>span {
+    margin-right: 10px;
+}
+
+.post-style-style-three .post-meta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mas-addons-post-widget-item p {
+    line-height: 29px;
+    letter-spacing: -0.2px;
+    font-size: 15px;
+    color: var(--text-color);
+    margin-bottom: 0;
+}
+
+.mas-addons-post-widget-item.post-style-style-one .mas-addons-post-widget-item:hover {
+    box-shadow: 0px 34px 33px 0px rgb(22 28 45 / 13%);
+}
+
+.mas-addons-post-widget-item.post-style-style-one .mas-addons-post-widget-item {
+    margin-bottom: 30px;
+    box-shadow: 0px 14px 120px -2px rgba(0, 0, 0, 0.06);
+    background-color: var(--white-color);
+    overflow: hidden;
+    transition: .4s;
+}
+
+/* Blog style v2  */
+
+.mas-addons-post-widget-item.post-style-style-two .post-btn .icon-after {
+    text-indent: -10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .category-list {
+    padding: 5px 18px;
+    background-color: #FCDC00;
+    border-radius: 50px;
+    color: #262729;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Rubik';
+    line-height: 1.818em;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-date span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(2, 12, 23, 0.7);
+}
+
+.mas-addons-post-widget-item.post-style-style-two .comment-count span {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(2, 12, 23, 0.6);
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-meta-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-content {
+    margin: 30px 40px 30px 40px;
+    overflow: hidden;
+}
+
+.mas-addons-post-widget-item.post-style-style-three .post-content {
+    width: 80%;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-content .post-btn-wrap {
+    overflow: hidden;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-category,
+.mas-addons-post-widget-item.post-style-style-three .post-category {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    padding: 0;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .category a {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    color: #057689;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .separator i {
+    font-size: 5px;
+    color: rgba(2, 12, 23, 0.3);
+    margin-left: 8px;
+    margin-right: 8px !important;
+    margin-top: 0;
+    display: inherit;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-title {
+    font-size: 18px;
+    line-height: 1.388em;
+    margin: 15px 0px 20px 0px;
+    color: #020C17;
+    transition: .4s;
+    -webkit-transition: .4s;
+    -moz-transition: .4s;
+    -ms-transition: .4s;
+    -o-transition: .4s;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-meta-bottom .mas-addons-comment:not(:first-child) {
+    margin-bottom: 0px;
+    position: relative;
+    margin-left: 3px;
+    padding-left: 17px;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-meta-bottom .mas-addons-comment:before {
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height: 80%;
+    background-color: #fff;
+    content: "";
+    top: 10%;
+}
+
+.mas-addons-post-widget-item.post-style-style-three .post-top-date {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.mas-addons-post-widget-item.post-style-style-three .top-category-list {
+    display: flex;
+    align-items: center;
+}
+
+.post-content {
+    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -ms-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    /* margin: 0px 40px 30px 40px; */
+}
+
+.mas-addons-post-widget-item.post-style-style-one .post-content {
+    margin: 0px 40px 30px 40px;
+}
+
+.mas-addons-post-widget-item.post-style-style-two {
+    position: relative;
+    overflow: hidden;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-title:hover {
+    color: rgb(255, 87, 34);
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-link {
+    display: block;
+}
+
+.post-thumbnail-wrapper.post-style-style-two {
+    position: relative;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-thumbnail-wrapper img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.mas-addons-post-widget-item.post-style-style-two .post-thumbnail .image-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--accent-color-2);
+    color: var(--heading-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.mas-addons-post-widget-item.post-style-style-two:hover .post-thumbnail .image-icon {
+    transform: scale(1.4);
+}
+
+.mas-addons-post-widget-item.post-style-list {
+    display: flex;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.mas-addons-post-widget-item.post-style-list .post-thumbnail-wrapper .post-link {
+    height: 100%;
+}
+
+.mas-addons-post-widget-item.post-style-list .post-thumbnail-wrapper .post-thumbnail {
+    height: 100%;
+}
+
+.mas-addons-post-widget-item.post-style-list .post-thumbnail-wrapper img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.mas-addons-post-widget-item.post-style-list .post-thumbnail-wrapper {
+    width: 57%;
+    padding-right: 30px;
+}
+
+.mas-addons-post-widget-item.post-style-list .post-content-wrap {
+    padding-top: 0;
+}
+
+/* arrow */
+
+.blog-slider-arrow .slick-prev:before,
+.blog-slider-arrow .slick-next:before {
+    display: none;
+}
+
+.blog-slider-arrow.slick-active {
+    color: #1d263a;
+}
+
+.blog-slider-arrow .prev {
+    position: relative;
+}
+
+.blog-slider-arrow .next {
+    position: relative;
+}
+
+.blog-slider-arrow .slick-active {
+    background: #2c4bff;
+    color: #fff;
+}
+
+.blog-slider-arrow button {
+    transition: all 0.4s ease-in-out;
+    font-size: 18px;
+}
+
+.blog-slider-arrow button:hover {
+    background-color: #1d263a;
+    color: #fff;
+}
+
+.blog-slider-arrow {
+    background: rgba(2, 12, 23, 0.4);
+    position: absolute;
+    right: 0;
+    top: -130px;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+.blog-slider-arrow .slick-prev {
+    left: 0px !important;
+    display: inline-block;
+    width: initial;
+    height: initial;
+    transform: initial;
+    margin-right: 15px;
+}
+
+.blog-slider-arrow .slick-next {
+    left: 0px !important;
+    display: inline-block;
+    width: initial;
+    height: initial;
+    transform: initial;
+    margin-left: 15px;
+}
+
+/*
+* pagination css
+*/
+
+.mas-addons-pagination a,
+.mas-addons-pagination span.current {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #262729;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgba(38, 39, 41, 0.1);
+    margin: 0px 5px;
+    transition: .4s;
+}
+
+.mas-addons-pagination {
+    margin-top: 30px;
+}
+
+.mas-addons-pagination span.current {
+    color: #fff;
+    background-color: #5034FC;
+}
+
+.mas-addons-pagination {
+    margin-left: -5px;
+}
+
+.mas-addons-pagination a:hover {
+    color: #fff;
+    background-color: #5034FC;
+}
+
+.mas-addons-post-widget-item.post-style-style-one .post-btn-wrap {
+    margin: 40px 0px 0px 40px;
+    color: #fff;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.post-meta-bottom i,
+.post-meta-bottom svg {
+    margin-right: 12px;
+}
+
+/*
+        Hover
+        */
+
+.post-thumbnail img {
+    transition: all 0.4s ease-in-out;
+}
+
+.mas-addons-post-widget-wrap.hover-one:hover .post-thumbnail img {
+    transform: scale(1.1);
+}
+
+.mas-addons-post-widget-wrap.hover-one .post-thumbnail {
+    overflow: hidden;
+}
+
+.mas-addons-post-widget-item.post-style-style-two:hover .mas-addons-post-widget-item .post-content-wrap {
+    opacity: 1;
+    border: 0;
+    z-index: 999;
+}
+
+.mas-addons-post-widget-item.post-style-style-two:hover .post-content-wrap {
+    opacity: 1;
+    visibility: visible;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .mas-addons-post-widget-item.post-style-style-two .post-content-wrap {
+        opacity: 1;
+        bottom: 0;
+        visibility: visible;
+    }
+}
+
+/* .mas-addons-post-widget-item.post-style-style-two .post-content-wrap {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0;
+}
+
+.post-meta-bottom svg, .post-meta-bottom i {
+    margin-right: 12px;
+    font-size: 15px;
+    width: 15px;
+}
+
+.post-style-style-two .post-meta-bottom .mas-addons-comment:before {
+    display: none;
+}
+.mas-addons-post-widget-item.post-style-style-two .post-content-wrap {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.67) 45.14%, rgba(0, 0, 0, 0) 100%);
+}
+
+.post-style-style-two .post-meta-bottom .mas-addons-comment {
+    padding-left: 0;
+}
+
+.post-style-style-two span.byline .author {
+    position: relative;
+    margin-right: 25px;
+    padding-right: 25px;
+}
+
+.post-style-style-two span.byline .author:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    content: "";
+} */
+
+/*---------------------------------------------------
+BLOG CATEGORY
+----------------------------------------------------*/
+
+.advis-blog-cat {
+    position: relative;
+}
+
+.advis-cat-contnt {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .4s;
+}
+
+.advis-blog-cat-title {
+    background-color: #020C17;
+    font-size: 18px;
+    color: #fff;
+    padding: 13px 25px;
+    line-height: 1.5em;
+    text-align: center;
+    margin-bottom: 0px;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.advis-blog-cat:hover .advis-blog-cat-title {
+    background-color: #FFBE00;
+    color: #020C17;
+}
+
+.advis-cat-image img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px;
+}
+
+.mas-addons-addon-post-navigation .nav-links a {
+    /* Style for "PREV PROJE" */
+    color: var(--heading-color);
+    font-family: Manrope;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid var(--heading-color);
+    padding: 24px 31px;
+    transition: .4s;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+}
+
+.mas-addons-addon-post-navigation .nav-links a:hover {
+    border-color: #5034FC;
+}
+
+.mas-addons-addon-post-navigation .nav-links a:hover:after {
+    transform: scale(1);
+}
+
+.mas-addons-addon-post-navigation .nav-links a .nav-icon svg {
+    width: 17px;
+}
+
+.mas-addons-addon-post-navigation .nav-links a .nav-icon i {
+    font-size: 17px;
+}
+
+.mas-addons-addon-post-navigation .nav-links .nav-previous a .nav-icon {
+    margin-right: 14px;
+}
+
+.mas-addons-addon-post-navigation .nav-links .nav-next a .nav-icon {
+    margin-left: 14px;
+}
+
+/*---------------------------------------------------
+BACK TO SCROLL
+----------------------------------------------------*/
+
+.mas-addons-back-to-top-wraper .mas-addons-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    position: fixed;
+    transition: all .4s;
+    opacity: 0;
+    transform: translatey(20px);
+}
+
+.mas-addons-back-to-top-wraper .mas-addons-icon.sticky-active {
+    opacity: 1;
+    visibility: visible;
+    transition: all .4s linear;
+    z-index: 111;
+    transform: translatey(0);
+}
+
+.elementor-editor-active .mas-addons-back-to-top-wraper .mas-addons-icon {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*---------------------------------------------------
+PORTFOLIO
+----------------------------------------------------*/
+
+.mas-addons-portfolio-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.mas-addons-portfolio-item img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    width: 100%;
+    object-fit: cover;
+    /* height: 100%; */
+    margin-bottom: 0 !important;
+}
+
+a.mas-addons-portfolio-content.content-postion-on-image {
+    position: absolute;
+    bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.85);
+    left: 15px;
+    right: 15px;
+    padding: 20px 30px;
+    border-radius: 8px;
+    color: #161c2d;
+    transition: .4s;
+    transform: translatex(-10%);
+    opacity: 0;
+}
+
+a.mas-addons-portfolio-content .mas-addons-pf-category {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.63px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    color: rgba(22, 28, 45, .5);
+}
+
+h3.mas-addons-portfolio-title {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    line-height: 32px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mas-addons-portfolio-item:hover a.mas-addons-portfolio-content.content-postion-on-image {
+    opacity: 1;
+    transform: translate(0);
+}
+
+ul.pf-isotope-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+ul.pf-isotope-nav li {
+    /* Style for "All works" */
+    color: #6f727b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.63px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 55px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+ul.pf-isotope-nav li.active,
+ul.pf-isotope-nav li:hover {
+    color: var(--accent-color);
+}
+
+a.mas-addons-portfolio-content.content-postion-below-image {
+    display: block;
+    position: relative;
+    padding: 40px 30px;
+}
+
+.mas-addons-pf-loadmore-btn {
+    cursor: pointer;
+    font-size: 13px;
+    color: #030303;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid;
+    letter-spacing: 1.63px;
+    border: 1px solid rgba(3, 3, 3, 0.3);
+}
+
+.mas-addons-hover-rotate .mas-addons-portfolio-item:hover img {
+    transform: scale(0.8) rotate(-6deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 74px rgba(68, 77, 136, 0.2);
+}
+
+.mas-addons-hover-rotate .mas-addons-portfolio-item img {
+    transition: .4s;
+}
+
+a.mas-addons-portfolio-content.content-postion-disabled {
+    display: none;
+}
+
+/*---------------------------------------------------
+blog
+----------------------------------------------------*/
+
+.mas-addons-post-widget-item .post-thumbnail {
+    overflow: hidden;
+}
+
+.mas-addons-post-widget-item .post-thumbnail:hover img {
+    transform: scale(1.1);
+}
+
+.mas-addons--blog-thumb {
+    position: relative;
+}
+
+.mas-addons-icon-videobox {
+    bottom: 37px;
+    background: #FEE444;
+    width: 115px;
+    height: 115px;
+    text-align: center;
+    position: absolute;
+    left: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mas-addons--blog-thumb img {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.mas-addons--blog-thumb .owl-carousel .owl-item img {
+    height: 100% !important;
+}
+
+.mas-addons--tc p {
+    font-size: 28px;
+    line-height: 46px;
+}
+
+.t--name {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 4px;
+}
+
+.t-postion {
+    opacity: 0.7;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.mas-addons--blog .owl-nav {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+}
+
+.mas-addons-contact-from button i {
+    margin-left: 20px;
+}
+
+.business-subs-form-01 button i {
+    margin-left: 0px;
+}
+
+.mas-addons--blog .owl-nav i {
+    color: #FFFFFF;
+    font-size: 24px;
+}
+
+.mas-addons--blog .owl-nav .owl-prev {
+    margin-right: 60px;
+}
+
+.mas-addons--blog .owl-nav i:hover {
+    color: #FEE444;
+}
+
+.fIngo--tn-single.style-five .fIngo--tn-icon {
+    position: static;
+}
+
+/*---------------------------------------------------
+VERTICAL MENU
+----------------------------------------------------*/
+
+.mas-addons-vertical-menu-wrap ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.mas-addons-vertical-menu a {
+    /* Style for "Chemical R" */
+    color: #171b24;
+    font-family: Manrope;
+    font-size: 21px;
+    font-weight: 700;
+    text-align: left;
+    /* Text style for "Chemical R" */
+    font-style: normal;
+    letter-spacing: normal;
+    padding: 14px 0;
+    transition: .3s;
+    display: block;
+}
+
+.mas-addons-vertical-menu a:hover,
+.mas-addons-vertical-menu li.current-menu-item>a {
+    color: var(--accent-color);
+}
+
+/*---------------------------------------------------
+SLIDER
+----------------------------------------------------*/
+
+.mas-addons-rev-btn:hover img {
+    margin-left: 15px;
+}
+
+.mas-addons-rev-btn img {
+    transition: .4s;
+    margin-left: 7px;
+    ;
+}
+
+/*---------------------------------------------------
+STICKY
+----------------------------------------------------*/
+
+.sticky-wrapper {
+    width: 100%;
+    height: auto!important;
+}
+
+.sticky-wrapper.is-sticky>.mas-addons-sticky-yes {
+/*    position: absolute;*/
+    opacity: 0;
+    transform: translateY(-50%);
+}
+
+.sticky-wrapper.is-sticky>.mas-addons-sticky-yes.reveal-sticky {
+/*    position: fixed;
+    width: 100%;
+    left: 0;*/
+    opacity: 1;
+    transform: translate(0px);
+    transition: all 0.3s;
+}
+
+/* megamenu builder css  */
+
+.main-navigation ul.navbar-nav .menu-item-has-children .sub-menu.mas-addons-megamenu-builder-content-wrap {
+    padding: 0 !important;
+    border: none;
+}
+
+/*---------------------------------------------------
+COUNTDOWN
+----------------------------------------------------*/
+
+.mas-addons-countdown .mas-addons-countdown__count {
+    font-size: 120px;
+    letter-spacing: -3.96px;
+    font-weight: 700;
+    color: var(--heading-color);
+    line-height: 1.3;
+}
+
+.mas-addons-countdown li {
+    text-align: center;
+    display: inline-block;
+}
+
+.mas-addons-countdown .text {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+ul.mas-addons-countdown {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mas-addons-countdown-item.show-no {
+    display: none;
+}
+
+li.mas-addons-countdown-item.count-down-block .text {
+    display: block;
+}
+
+li.mas-addons-countdown-item.count-down-inline .text {
+    display: inline-block;
+}
+
+.mas-addons-countdown-wrapper .divider {
+    position: relative;
+}
+
+/*---------------------------------------------------
+CONTACT FORM
+----------------------------------------------------*/
+
+.mas-addons--contactform-wraper.absolute {
+    position: relative;
+}
+
+.mas-addons--contactform-wraper.absolute input[type=submit],
+.mas-addons--contactform-wraper.absolute button[type=submit] {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.mas_addons--contact-form- p:empty:before {
+    display: none;
+}
+
+.mas-addons--contactform-wraper p:empty:before {
+    display: none;
+}
+
+.mas-addons--contactform-wraper input:not([type=checkbox]) {
+    height: 70px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.mas-addons--contactform-wraper input[type=submit],
+.mas-addons--contactform-wraper button[type=submit] {
+    background-color: #6A26DA;
+    color: #fff;
+    font-weight: 600;
+    height: 70px;
+    width: 172px;
+    padding: 0px;
+    transition: all 0.4s ease-in-out;
+}
+
+form.wpcf7-form {
+    display: inline-block;
+}
+
+.mas-addons--contact-icon-before {
+    position: relative;
+}
+
+.mas-addons--contact-icon-before:before {
+    position: absolute;
+    left: 38px;
+    top: 22px;
+    color: #6001D3;
+    z-index: 10;
+    font-family: 'Font Awesome 5 Free';
+    content: "\f0e0";
+    font-size: 20px;
+}
+
+form.wpcf7-form input {
+    width: 100%;
+    ;
+}
+
+.mas-addons--contact-icon-before:before {
+    left: 25px;
+}
+
+div.wpcf7 .ajax-loader:before {
+    display: none;
+}
+
+.wpcf7 form.submitting .ajax-loader {
+    display: none;
+}
+
+.wpcf7 form.submitting input.wpcf7-form-control.wpcf7-submit {
+    opacity: .4;
+    cursor: alias;
+    cursor: progress;
+}
+
+.mas-addons--contactform-wraper.mas-addons-contact-from {
+    position: relative;
+}
+
+/*---------------------------------------------------
+LOGIN FORM
+----------------------------------------------------*/
+
+.form-field label {
+    display: block;
+}
+
+.form-field label,
+.form-field input {
+    width: 100%;
+}
+
+.log-remember span.checkmark {
+    display: flex;
+    align-items: center;
+}
+
+.form-field input {
+    margin-bottom: 20px;
+}
+
+/* check box */
+
+#rememberme input[type="checkbox"],
+.reg-remember input[type="checkbox"] {
+    height: 20px !important;
+    width: 20px !important;
+    margin-right: 11px !important;
+    cursor: pointer;
+    margin-bottom: 0px !important;
+}
+
+.mas-addons-login-form-wrapper form .log-remember label,
+.mas-addons-register-form form .reg-remember label {
+    display: flex;
+    align-items: center;
+}
+
+.mas-addons-register-wrapper form .reg-remember label a {
+    margin-left: 3px;
+}
+
+/* reset password */
+
+.mas-addons-form .mas-addons-input {
+    height: 56px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+/*---------------------------------------------------
+  ACCORDION
+  ----------------------------------------------------*/
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title h3 {
+    width: 100%;
+    font-size: 15px;
+}
+
+.mas-addons-accordion-single-item h3 {
+    font-weight: 600;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title:hover {
+    cursor: pointer;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-active-inactive-icon {
+    position: relative;
+    margin-left: 15px;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title span.mas-addons-tab-title-icon {
+    position: relative;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-active-icon i,
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-inactive-icon i,
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title span.mas-addons-tab-title-icon i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-active-icon svg,
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-inactive-icon svg,
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title span.mas-addons-tab-title-icon svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title.active .mas-addons-inactive-icon,
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-active-icon {
+    display: none;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title.active .mas-addons-active-icon {
+    display: block;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content {
+    display: none;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-title .mas-addons-active-inactive-icon {
+    width: 70px;
+    margin-left: auto;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper {
+    display: flex;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper.has-image-yes .mas-addons-accordion-text {
+    width: 60%;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper.has-image-yes .mas-addons-accordion-image {
+    width: 40%;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper.has-image-yes.image-position-left .mas-addons-accordion-text {
+    order: 2;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper.has-image-yes.image-position-left .mas-addons-accordion-image {
+    order: 1;
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper .mas-addons-accordion-button a {
+    display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+    .mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper {
+        flex-direction: column;
+    }
+
+    .mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper.has-image-yes .mas-addons-accordion-text,
+    .mas-addons-accordion-items .mas-addons-accordion-single-item .mas-addons-accordion-content .mas-addons-accordion-content-wrapper.has-image-yes .mas-addons-accordion-image {
+        width: 100%;
+    }
+
+    .mas-addons-post-widget-item.post-style-style-three .post-content {
+        width: 100%;
+    }
+}
+
+.mas-addons-accordion-items .mas-addons-accordion-single-item:last-child {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+/*---------------------------------------------------
+  PROGRESS BAR
+  ----------------------------------------------------*/
+
+.ldBar {
+    position: relative;
+}
+
+.ldBar.label-center>.ldBar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-shadow: 0 0 3px #ffffff;
+}
+
+.mas-addons-progress-bar .ldBar-label:after {
+    content: "%";
+    display: inline;
+    position: absolute;
+}
+
+.ldBar.no-percent .ldBar-label:after {
+    content: ""
+}
+
+[class*="mas-addons-progress-bar-"].line {
+    position: relative;
+}
+
+[class*="mas-addons-progress-bar-"].line .ldBar-label {
+    position: absolute;
+    top: -12px;
+    right: 0;
+}
+
+[class*="mas-addons-progress-bar-"].line-bubble {
+    position: relative;
+}
+
+[class*="mas-addons-progress-bar-"].line-bubble .ldBar-label {
+    position: absolute;
+    left: 0;
+    top: 0%;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: translate(-50%, 25%);
+    transform: translate(-50%, 25%);
+    background-color: #ccc;
+    line-height: 27px;
+}
+
+[class*="mas-addons-progress-bar-"].circle {
+    position: relative;
+}
+
+[class*="mas-addons-progress-bar-"].circle .ldBar-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+[class*="mas-addons-progress-bar-"].circle h3 {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+[class*="mas-addons-progress-bar-"].fan {
+    position: relative;
+}
+
+[class*="mas-addons-progress-bar-"].fan svg {
+    margin-top: -40%;
+}
+
+[class*="mas-addons-progress-bar-"].fan h3 {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+[class*="mas-addons-progress-bar-"].fan .ldBar-label {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -20%);
+    transform: translate(-50%, -20%);
+    font-size: 30px;
+    bottom: 7%;
+}
+
+[class*="mas-addons-progress-bar-"].fan .left-title {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+[class*="mas-addons-progress-bar-"].fan .right-title {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+}
+
+.mas-addons-progress-bar svg:not(:root) {
+    overflow: hidden;
+    height: inherit;
+}
+
+.mas-addons-progress-bar-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* pricing badge  */
+
+span.mas-addons-pricing-badge {
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 14px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+span.mas-addons-pricing-badge:before {
+    height: 0;
+    width: 0;
+    right: -5.5px;
+    top: 0.1px;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+span.mas-addons-pricing-badge:before,
+span.mas-addons-pricing-badge:after {
+    content: "";
+    position: absolute;
+}
+
+span.mas-addons-pricing-badge:after {
+    height: 0;
+    width: 0;
+    bottom: 0;
+    left: -9px;
+    border-top: 11px solid #F47530;
+    border-bottom: 14px solid #F47530;
+    border-left: 17px solid transparent;
+}
+
+/*---------------------------------------------------
+BRAND LOGO
+----------------------------------------------------*/
+
+/* arrow */
+
+/* the slides */
+
+.brand-logo-slider .slick-slide {
+    margin: 0 27px;
+}
+
+/* the parent */
+
+.brand-logo-slider .slick-list {
+    margin: 0 -27px;
+}
+
+.brand-logo-slider-arrow {
+    position: relative;
+}
+
+.brand-logo-slider-arrow .slick-prev:before,
+.brand-logo-slider-arrow .slick-next:before {
+    display: none;
+}
+
+.brand-logo-slider-arrow button button {
+    display: none;
+}
+
+.brand-logo-slider-arrow.slick-active {
+    color: #1d263a;
+}
+
+.brand-logo-slider-arrow button.prev {
+    position: absolute;
+}
+
+.brand-logo-slider-arrow button.next {
+    position: absolute;
+}
+
+.brand-logo-slider-arrow .slick-active {
+    background: #2c4bff;
+    color: #fff;
+}
+
+.brand-logo-slider-arrow button {
+    transition: all 0.4s ease-in-out;
+    font-size: 20px;
+    color: #1d263a;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    background: rgba(44, 71, 255, 0.6);
+    text-align: center;
+    display: inline-block;
+}
+
+.brand-logo-slider-arrow button:hover {
+    background-color: #1d263a;
+    color: #fff;
+}
+
+.brand-logo-dots .slick-dots {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo-dots .slick-dots li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.brand-logo-dots .slick-dots li button {
+    border: none;
+    list-style: none;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    color: transparent;
+    opacity: 0.2;
+}
+
+.brand-logo-dots .slick-dots li button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.brand-logo-dots .slick-dots li.slick-active {
+    background-color: #ffd166 !important;
+}
+
+@media only screen and (min-width: 768px) {
+    .brand-logo-slider .slick-slide img {
+        display: block;
+        margin: 0px auto;
+    }
+
+    .brand-logo-slider-arrow .prev {
+        left: 215px !important;
+        right: auto !important;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .brand-logo-slider .slick-slide img {
+        display: block;
+        margin: 0px auto;
+    }
+}
+
+/*---------------------------------------------------
+CARD
+----------------------------------------------------*/
+
+.mas-addons-card-images {
+    position: relative;
+}
+
+.mas-addons-card-images img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.mas-addons-card-number {
+    position: absolute;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #ED6341;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 30px;
+    margin-top: 30px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: 0.4s all ease-in-out;
+}
+
+.mas-addons-single-card:hover .mas-addons-card-number {
+    opacity: 1;
+    visibility: visible;
+    margin-left: 30px;
+}
+
+.mas-addons-card-content {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    background: linear-gradient(180deg, rgba(31, 40, 57, 0) 17.52%, #000000 100%);
+    width: 100%;
+}
+
+.mas-addons-card-images:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    content: "";
+    background: linear-gradient(180deg, rgba(31, 40, 57, 0) 17.52%, #000000 100%);
+}
+
+.mas-addons-card-title {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 33px;
+}
+
+.mas-addons-card-discription {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+}
+
+.mas-addons-single-card.hover-one:hover .mas-addons-card-images img {
+    transform: scale(1.1);
+}
+
+.mas-addons-single-card.hover-one .mas-addons-card-images {
+    overflow: hidden;
+}
+
+.mas-addons-card-images img {
+    transition: .7s;
+}
+
+/*---------------------------------------------------
+TAB
+----------------------------------------------------*/
+
+.mas-addons-tab-content-single {
+    display: none;
+}
+
+.mas-addons-tab-content-single.current {
+    display: block;
+    position: relative;
+}
+
+.mas-addons--tab-menu ul.tabs {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 856px;
+    border-bottom: 2px solid rgb(0 28 128 / 20%);
+    flex-wrap: wrap;
+}
+
+.mas-addons--tab-menu ul.tabs>li {
+    display: inline-flex;
+    font-style: normal;
+    font-weight: 1.3;
+    font-size: 20px;
+    color: #2B59FF;
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.mas-addons--tab-menu ul.tabs>li .mas-addons-tab-icon {
+    margin-right: 8px;
+    font-size: 18px;
+    width: 18px;
+}
+
+.mas-addons--tab-menu {
+    text-align: center;
+}
+
+.mas-addons--tab-menu ul.tabs>li.current {
+    border-color: #FD4C5C;
+    color: #FD4C5C;
+}
+
+.mas-addons-elm-edit-popup .mfp-content {
+    max-width: 80vw;
+    max-height: 80vh;
+}
+
+.mas-addons-elm-edit-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border: 1px solid #ffa500d9;
+    transition: .3s;
+}
+
+a.mas-addons-elm-edit {
+    transform: translatey(-100%);
+    background: #ffa500d9;
+    color: #fff;
+    padding: 0 13px;
+}
+
+.toggle-password {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: rgba(73, 100, 136, 0.5);
+}
+
+/*---------------------------------------------------
+RESPONSIVE CSS
+----------------------------------------------------*/
+
+@media only screen and (min-width: 1350px) {
+    .elementor-section.elementor-section-boxed>.elementor-container {
+        max-width: 1320px;
+    }
+}
+
+@media only screen and (min-width:1025px) and (max-width:1200px) {
+    .mas-addons-pricing-area .container-fluid {
+        padding: 0 100px;
+    }
+
+    .mas-addons-pricing-item-wrap {
+        margin-bottom: 30px;
+    }
+
+    .mas-addons-register-form form .reg-remember label {
+        display: block;
+    }
+
+    .reg-remember input[type="checkbox"] {
+        width: 15px !important;
+    }
+}
+
+@media only screen and (min-width:991px) and (max-width:1200px) {
+    .mas-addons-pricing-item-wrap {
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .mas-addons-pricing-item-wrap {
+        margin-bottom: 30px;
+    }
+
+    .mas-addons-register-form form .reg-remember label {
+        display: block;
+    }
+
+    .reg-remember input[type="checkbox"] {
+        width: 15px !important;
+    }
+}
+
+@media only screen and (max-width:991px) and (min-width:768px) {
+    .mas-addons-blog-stories .swiper-navigation {
+        margin-top: 0;
+    }
+
+    .content-align-tablet-right {
+        text-align: right;
+    }
+
+    .content-align-tablet-center {
+        text-align: center;
+    }
+
+    .content-align-tablet-left {
+        text-align: left;
+    }
+
+    .content-align-tablet-justify .mas-addons-btn {
+        width: 100%;
+    }
+
+    /* Main menu  */
+    .mas-addons-main-menu-wrap.menu-align-tablet-end {
+        justify-content: flex-end;
+    }
+
+    .mas-addons-main-menu-wrap.menu-align-tablet-center {
+        justify-content: center;
+    }
+
+    .mas-addons-main-menu-wrap.menu-align-tablet-start {
+        justify-content: flex-start;
+    }
+
+    .mas-addons-post-widget-item.post-style-style-three .post-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .content-align-mobile-right {
+        text-align: right;
+    }
+
+    .content-align-mobile-center {
+        text-align: center;
+    }
+
+    .content-align-mobile-left {
+        text-align: left;
+    }
+
+    .content-align-mobile-justify .mas-addons-btn {
+        width: 100%;
+    }
+
+    /* Main menu  */
+    .mas-addons-main-menu-wrap.menu-align-mobile-end {
+        justify-content: flex-end;
+    }
+
+    .mas-addons-main-menu-wrap.menu-align-mobile-center {
+        justify-content: center;
+    }
+
+    .mas-addons-main-menu-wrap.menu-align-mobile-start {
+        justify-content: flex-start;
+    }
+
+    .nice-select ul.list {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .mas-addons-addon-post-navigation .nav-links {
+        display: block;
+    }
+
+    .mas-addons-addon-post-navigation .nav-links .nav-previous {
+        margin-bottom: 10px;
+    }
+
+    .mas-addons--contactform-wraper.absolute input[type=submit],
+    .mas-addons--contactform-wraper.absolute button[type=submit] {
+        left: 0;
+    }
+}
+
+/* Image Overflow Hidden */
+
+.elementor-widget-image .elementor-widget-container {
+    overflow: hidden;
+}
+
+.subscribe-form-02 .with-icon-input i {
+    color: #CDCCD9;
+    font-size: 22px;
+    position: absolute;
+    left: 15;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.subscribe-form-02 .with-icon-input input {
+    position: relative;
+    z-index: 1;
+}
+
+.subscribe-form-02 p {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .subscribe-form-02 .with-icon-input i {
+        left: 10px;
+        top: 36px;
+    }
+}
+
+.mas-addons-form .mas-addons-link {
+    display: inherit;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.mas-addons-form .mas-addons-link p {
+    margin: 0;
+}
+
+.mas-addons-form .mas-addons-link p {
+    margin-left: 9px;
+}
+
+.mas-addons-login-form-wrapper .password-field {
+    position: relative;
+}
+
+.mas-addons-login-form-wrapper .forgetpassword {
+    right: 0;
+    top: 50%;
+}
+
+.elementor-widget-mas-addons-lost-password .elementor-widget-container {
+    text-align: center;
+}
+
+
+/*---------------------------------------------------
+VIDEO BUTTON
+----------------------------------------------------*/
+.mas-modal-button .mas-modal-image-action {
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.top-to-middle {
+    -webkit-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.mas-modal-item.modal-vimeo.bottom-to-middle {
+    -webkit-transform: translate(-50%, -30%);
+    transform: translate(-50%, -30%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.mas-modal-item.active.modal-vimeo.bottom-to-middle {
+    z-index: 9999;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mas-modal-item.modal-vimeo.right-to-middle {
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-transform: translate(-30%, -50%);
+    transform: translate(-30%, -50%);
+}
+
+.mas-modal-item.active.modal-vimeo.right-to-middle {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.mas-modal-item.modal-vimeo.left-to-middle {
+    -webkit-transform: translate(-70%, -50%);
+    transform: translate(-70%, -50%);
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.mas-modal-item.active.modal-vimeo.left-to-middle {
+    z-index: 9999;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.mas-modal-item.modal-vimeo.zoom-in {
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.mas-modal-item.active.modal-vimeo.zoom-in {
+    z-index: 9999;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.mas-modal-item.modal-vimeo.zoom-out {
+    -webkit-transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.5);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.mas-modal-item.active.modal-vimeo.zoom-out {
+    z-index: 9999;
+    display: block;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.mas-modal-item.modal-vimeo.left-rotate {
+    opacity: 0;
+    -webkit-transition: all 0.8s ease;
+    transition: all 0.8s ease;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+    -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+    transform: translate(-50%, -50%) rotateX(90deg);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+}
+
+.mas-modal-item.active.modal-vimeo.left-rotate {
+    opacity: 1;
+    z-index: 9999;
+    -webkit-transform: translate(-50%, -50%) rotateX(0);
+    transform: translate(-50%, -50%) rotateX(0);
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-close-btn {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-close-btn span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-close-btn span::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-close-btn span::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    background: #fff;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+
+.mas-modal-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    display: none;
+}
+
+.mas-modal-overlay.active {
+    opacity: 1;
+    z-index: 1000;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element.column-one .mas-modal-element-card {
+    width: 100%;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element.column-two .mas-modal-element-card {
+    width: 50%;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element.column-three .mas-modal-element-card {
+    width: 33.33%;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element.column-four .mas-modal-element-card {
+    width: 25%;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element.column-five .mas-modal-element-card {
+    width: 20%;
+}
+
+.mas-modal-item.image-gallery .mas-modal-element.column-six .mas-modal-element-card {
+    width: 16.66%;
+}
+
+.mas-modal-item {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.mas-modal-item.modal-vimeo {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -60%);
+    transform: translate(-50%, -60%);
+    height: auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    visibility: hidden;
+}
+
+@media (max-width: 991px) {
+    .mas-modal-item.modal-vimeo {
+        height: 100%;
+    }
+
+    .mas-modal-item.modal-vimeo::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-modal-element img {
+    display: block;
+    width: 100%;
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-modal-element .mas-modal-element-card .mas-modal-element-card-body p {
+    margin: 0;
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content .mas-modal-element .mas-modal-element-card img {
+    display: block;
+    width: 100%;
+}
+
+.mas-modal-item.modal-vimeo .mas-modal-content {
+    position: relative;
+}
+
+.mas-modal-item .mas-modal-content .mas-modal-element iframe {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.mas-modal-item.active.modal-vimeo {
+    opacity: 1;
+    z-index: 2000;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+.mas-modal-button.mas-modal-btn-fixed-width-yes .mas-modal-image-action {
+    position: relative;
+}
+
+.mas-modal-button.mas-modal-btn-fixed-width-yes .mas-modal-image-action span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.mas-modal-wrapper .mas-modal-item.mas-content-overflow-x- {
+    overflow-x: hidden;
+}
+
+.mas-modal-wrapper .mas-modal-item.mas-content-overflow-y- {
+    overflow-y: scroll;
+}
+
+/*---------------------------------------------------
+CONTENT SWITCHER
+----------------------------------------------------*/
+.mas-content-switcher-toggle-switch-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.mas-content-switcher-toggle-switch-label input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.mas-content-switcher-toggle-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: block;
+    border-style: solid;
+}
+
+.mas-content-switcher-toggle-switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.mas-content-switcher-toggle-switch-slider {
+    background-color: #2196F3;
+}
+
+input:focus+.mas-content-switcher-toggle-switch-slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.mas-content-switcher-toggle-switch-slider:before {
+    -webkit-transform: translate(34px, -50%);
+    -ms-transform: translate(34px, -50%);
+    transform: translate(34px, -50%);
+}
+
+.mas-content-switcher-toggle-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px 0;
+}
+
+.mas-content-switcher-toggle.mas_switecher_left {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.mas-content-switcher-toggle.mas_switecher_center {
+    justify-content: center;
+    display: flex;
+}
+
+.mas-content-switcher-toggle.mas_switecher_right {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.mas-content-switcher-toggle.mas_switecher_justify {
+    display: block;
+}
+
+.mas-content-switcher-toggle.mas_switecher_justify .mas-content-switcher-toggle-inner {
+    justify-content: center;
+}
+
+.mas-content-switcher-toggle-label-1 {
+    cursor: pointer;
+}
+
+.mas-content-switcher-toggle-label-2 {
+    cursor: pointer;
+}
+
+
+/*---------------------------------------------------
+GROUP LIST
+----------------------------------------------------*/
+.mas-list-group-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.mas-list-group .mas-list-group-wrapper.layout_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.mas-list-group .mas-list-group-wrapper.layout_2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item,
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item a {
+    position: relative;
+    line-height: 1;
+    display: flex;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item.mas-icon-center,
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item.mas-icon-center a {
+    flex-direction: column;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item.mas-icon-right .mas-list-group-icon {
+    order: 2;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon .mas-list-group-icon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon .mas-list-group-icon-image {
+    display: flex;
+}
+
+.mas-list-group .mas-list-group-wrapper.layout_1 .mas-list-group-item:after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    left: 0;
+}
+
+.mas-list-group .mas-list-group-wrapper.layout_2 .mas-list-group-item:after {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    content: "";
+    top: 0;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon.yes {
+    position: relative;
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon.yes i,
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon.yes .mas-list-group-icon-image,
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon.yes .mas-list-group-icon-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mas-list-group .mas-list-group-wrapper .mas-list-group-item .mas-list-group-icon.yes .mas-list-group-icon-number {
+    line-height: 0;
+}
+
+/* List Group CSS End */
+.busico-pricing-page .mas-addons-pricing-table-description,
+.busico-service-page .mas-addons-pricing-table-description {
+    display: none;
+}
