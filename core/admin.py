@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import Plan, UserComplaints
 from userauths.models import Deposit
 # Register your models here.
+admin.site.site_header = 'Bittradexchange Administration'
 
 class PlanAdmin(admin.ModelAdmin):
     list_display = ['title', 'pid','invested_amount','percentage_return','least_amount','max_amount']
